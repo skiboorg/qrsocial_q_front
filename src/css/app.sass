@@ -1,0 +1,397 @@
+// app global css in Sass form
+a
+  text-decoration: none !important
+  text-decoration-line: none !important
+  font-size: 16px !important
+
+.user
+  width: 240px
+  height: auto
+
+.text-decoration-none
+  text-decoration: none
+
+.settings-block
+  max-width: 875px
+  width: 100%
+
+.image
+  width: 100%
+  max-width: 100%
+  height: auto
+
+.block-one
+  padding: 0 20px
+  & .block-two
+    display: none
+
+.block-two
+  position: relative
+  z-index: 1
+  max-width: 1440px
+  margin: 0 auto
+
+.vip-block
+  background: url(~assets/vb1.png) no-repeat bottom
+  height: 646px
+  background-size: contain
+
+.live
+
+  &-video
+    border-radius: 24px
+    width: 100%
+    height: 100%
+    object-fit: cover
+@media (max-width: 1140px)
+  .vip-block
+    background: url(~assets/vb2.png) no-repeat right
+  .block-two
+    & .container
+      top: -400px !important
+      grid-template-columns: 1fr 1fr !important
+    & .live
+      bottom: 0 !important
+      display: flex
+      align-items: flex-end
+    & .live-video
+      height: 348px
+
+@media (max-width: 1024px)
+  .block-one
+    & .title
+      display: none !important
+  //.block-one
+  //  & .block-two
+  //    display: block !important
+  //    & .container
+  //      grid-template-columns: 1fr
+  //      & .live
+  //        margin-top: 0
+  //    &::before
+  //      position: absolute
+  //      content: url(~assets/girls-sm.png)
+  //      top: 120px
+  //      left: 50%
+  //      transform: translateX(-50%)
+  //      z-index: -1
+  //    & .container
+  //      top: 300px !important
+  //.block-two
+  //  display: none!important
+
+.balance-item
+  background: #FFFFFF
+  border-radius: 55px
+  display: flex
+  justify-content: space-between
+  padding: 8px 15px 8px 8px
+  font-size: 13px
+  line-height: 130%
+  color: #3E4042
+  align-items: center
+  margin-right: 8px
+  max-width: 100px
+
+.vip-item
+  background: #FFFFFF
+  box-shadow: 0px 4px 10px rgb(0 0 0 / 5%)
+  border-radius: 24px
+
+  padding: 7px
+  font-size: 14px
+  line-height: 130%
+  color: #8994A2
+  display: flex
+  align-items: center
+  justify-content: center
+
+.header
+  &.logged
+  &.page
+    & .logomob
+      display: none
+    & .header-right
+      display: none
+    //& .burger
+    //  display: none
+
+@media (max-width: 1024px)
+  .index .block-one
+    height: 960px !important
+  .block-two
+    max-width: 850px
+    margin: 0 auto
+    padding: 0 40px
+    & .container
+      top: -854px !important
+      grid-template-columns: 1fr !important
+      grid-gap: 0 !important
+      padding: 0 !important
+    & .vip-block
+      background: url(~assets/vb3.png) no-repeat bottom
+      height: 682px
+      background-size: contain !important
+      order: 1
+    & .live
+      order: 2
+
+
+  .block-three
+    max-width: 600px
+    margin: 0 auto
+
+  .block-four
+    max-width: 600px
+    margin: 0 auto
+  .block-five
+    max-width: 600px
+    margin: 0 auto
+  .block-six
+    max-width: 600px
+    margin: 0 auto
+  .block-seven
+    max-width: 600px
+    margin: 0 auto
+  .index .block-seven .container .content
+    grid-template-columns: 1fr
+
+@media (max-width: 640px)
+  .documents .contents .right .ul .li
+    grid-template-columns: 1fr
+  .index .block-one
+    height: 760px !important
+  .block-two
+    max-width: 840px
+    margin: 0 auto
+    & .container
+      top: -840px !important
+      grid-template-columns: 1fr !important
+      grid-gap: 0 !important
+      padding: 0  !important
+    & .vip-block
+      background: url(~assets/vb4.png) no-repeat bottom
+      height: 682px
+      background-size: contain !important
+
+
+
+@media (max-width: 440px)
+  .windowchat
+    height: calc(100vh - 94px - 138px) !important
+  .index .block-one
+    padding: 0 10px !important
+    height: 620px !important
+  .block-two
+    padding: 0 10px
+  .block-three
+    padding: 0 10px !important
+  .block-four
+    padding: 0 10px !important
+  .block-five
+    padding: 0 10px !important
+  .block-six
+    padding: 0 10px !important
+
+.stiker
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    grid-gap: 10px
+    overflow-y: auto
+    max-height: 100px
+
+  &-item
+    img
+      width: 40px
+      height: 40px
+      transition: all .2s linear
+      cursor: pointer
+      &:hover
+        transform: scale(1.1)
+
+.num-not-vip
+  color: $primary
+.num-vip
+  background: linear-gradient(98.16deg, #FFE360 45.92%, #F7AB0D 100%)
+  color: $dark
+  border-radius: 100%
+  width: 24px
+  height: 24px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-weight: bold
+  font-size: 10px
+  &.vip-1
+    background: linear-gradient(98.16deg, #FFE360 45.92%, #F7AB0D 100%)
+  &.vip-2
+    background: linear-gradient(98.16deg, #CACACA 45.92%, #858585 100%)
+  &.vip-3
+    background: linear-gradient(98.16deg, #FFE5C6 45.92%, #FFC783 100%)
+
+.top1
+  &::after
+    position: absolute
+    content: url(~assets/Top1.png)
+    top: -14px
+    left: -14px
+    z-index: -1
+.top2
+  &::after
+    position: absolute
+    content: url(~assets/Top2.png)
+    top: -14px
+    left: -14px
+    z-index: -1
+.top3
+  &::after
+    position: absolute
+    content: url(~assets/Top3.png)
+    top: -14px
+    left: -14px
+    z-index: -1
+.switch
+  position: relative
+  background: rgba(246, 73, 83, 20%)
+  border-radius: 55px
+  width: 100%
+  padding: 10px
+  display: flex
+  align-items: center
+  justify-content: space-around
+  z-index: 10
+  height: 70px
+
+
+  &-inner
+    position: absolute
+    top: 10px
+    bottom: 10px
+    width: 50%
+    left: 10px
+
+    background: #F64953
+    box-shadow: 0px 4px 25px rgba(246, 73, 83, 0.25)
+    border-radius: 55px
+    transition: all .2s linear
+    z-index: -1
+    &.active-right
+      left: 48%
+
+
+.index .block-seven .container .content .l .data .one
+  background: #FFFFFF
+  padding: 40px
+
+.index .block-seven .container .content .l .data .one
+  & .text
+    color: #3E4042
+  & .select
+    color: #3E4042
+
+  & .q-field__control
+    padding: 0 20px
+  & .q-field--outlined .q-field__control:before
+    border: 4px solid #F8D6D8
+.index .block-seven .container .content .l .data.vip
+  position: relative
+  border: 12px solid #FFFFFF
+  & .select
+    color: #FFFFFF
+  & .q-field--outlined .q-field__control:before
+    border: 4px solid #ffffff
+  & .one
+    background: radial-gradient(130.42% 71.71% at 147.52% 3.75%, #FFFFFF 0%, #FFB120 100%)
+    & .params .text
+      color: #d0d0d0
+    & .params.active .text
+      color: #FFFFFF
+  &::before
+    position: absolute
+    content: url(~assets/vip-stars.png)
+    top: -180px
+    right: -70px
+
+.q-item__label
+    color: #3E4042
+.tariff-info
+  background: #FFFFFF
+  border: 1px solid #E2E2E2
+  box-sizing: border-box
+  border-radius: 16px
+  padding: 40px
+  color: #8994A1
+
+.chat-m
+  padding: 0 !important
+.gift-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(90px,1fr))
+  grid-gap: 10px
+
+.nav-menu-item
+  position: relative
+
+
+  &:hover > div
+    opacity: 1
+    top: 25px
+  &__inner
+    display: none
+    position: absolute
+    background: #FFFFFF
+    padding: 5px
+    opacity: 0
+    top: 35px
+    border-radius: 10px
+    transition: all .2s linear
+    width: 100px
+    p
+      font-size: 12px
+      color: #3E4042
+    &.show
+      display: block
+
+.chat-send-block
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+@media (max-width: 440px)
+
+  .openchat
+    &.backblock
+      border-radius: 0
+    & .bottom
+      position: absolute
+      background: #FFFFFF
+      bottom: 0
+      width: 100%
+      z-index: 10
+
+  .chat-send-block
+    flex-wrap: wrap
+    & .q-field
+      margin-right: 0
+      flex-basis: 100%
+      margin-bottom: 16px
+
+.girls-grid
+  display: grid
+  grid-template-columns: repeat(5,1fr)
+  grid-gap: 30px
+
+.tiktok-grid
+  display: grid
+  grid-template-columns: repeat(5,1fr)
+  grid-gap: 10px
+
+.q-avatar
+  img
+    object-fit: cover
+
+.photo-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill,minmax(100px,1fr))
+  grid-gap: 10px
