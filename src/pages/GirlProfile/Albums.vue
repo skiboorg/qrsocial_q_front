@@ -23,7 +23,7 @@
 
 				</div>
     <div v-else class="">
-      <div @click="galleryShow=false" class="h1 q-mb-sm">Back</div>
+      <div @click="galleryShow=false" class="q-mb-lg text-bold text-dark cursor-pointer flex items-center"><q-icon name="arrow_back_ios" size="sm"/> 后退</div>
       <q-carousel
       swipeable
       animated

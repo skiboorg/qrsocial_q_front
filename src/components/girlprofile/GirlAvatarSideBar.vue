@@ -1,5 +1,5 @@
 <template>
-  <div class="wall-avatar">
+  <div class="wall-avatar " style="max-width: 240px">
 			<div class="avatar-block backblock">
         <q-avatar size="185px" class="q-mb-md">
           <img :src="currentGirl.avatar" alt="avatar">

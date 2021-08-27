@@ -172,7 +172,7 @@
               </div>
             </div>
           </div>
-          <div class="sidebar wall-avatar">
+          <div class="sidebar ">
             <div class="right favorite-block">
               <div class="flex items-center q-pa-lg">
                 <img class="q-mr-md " src="~assets/rating.svg" alt="fire">
@@ -201,7 +201,7 @@
             <div class="content">
               <div class="l" v-for="post in posts" :key="post.id">
                 <router-link :to="`/blogs/${post.name_slug}`">
-                  <img class="image" style="width:315px; height: 200px; object-fit: cover" :src="post.image" alt="picture">
+                  <img class="image" style=" height: 200px; object-fit: cover" :src="post.image" alt="picture">
                   <div class="text-h6 text-dark">{{post.short_description}}</div>
                 </router-link>
               </div>

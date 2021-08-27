@@ -1,9 +1,12 @@
 <template>
  <div class="wall-avatar">
 			<div class="avatar-block backblock">
-        <q-avatar size="185px" >
+        <div class="user-avatar-cover" style="background: url(http://placehold.it/300)">
+           <q-avatar size="185px" >
               	<img  :src="$auth.user.avatar" alt="avatar">
             </q-avatar>
+        </div>
+
 
 				<div class="edit cursor-pointer " @click="$router.push({name:'user-profile-settings'})">我的设置</div>
 				<div class="edit cursor-pointer text-primary" @click="logout">注销</div>
@@ -57,6 +60,17 @@ export default {
 
 }
 </script>
- <style lang="sass">
+<style lang="sass">
+.avatar-block
+  overflow: hidden
+.user-avatar-cover
+  margin: -28px
+  background-size: cover !important
+  background-repeat: no-repeat !important
 
- </style>
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 28px
+  margin-bottom: 20px
+</style>

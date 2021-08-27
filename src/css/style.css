@@ -925,14 +925,12 @@ div {
   background: 0 0;
   box-shadow: 0 0;
   border-radius: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 30px;
 }
 
-.index .block-five .container .content {
-  max-width: 1046px;
-  width: 100%;
-}
+
 
 .index .block-five .container .content .tv {
   background: #FFFFFF;
@@ -1124,7 +1122,7 @@ div {
 }
 
 .index .block-five .container .sidebar {
-  max-width: 366px;
+
   width: 100%;
 }
 
@@ -1233,12 +1231,13 @@ div {
 }
 
 .index .block-six .container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 30px;
 }
 
 .index .block-six .container .left {
-  max-width: 706px;
+
   width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 5.30815px 72.987px rgba(0, 0, 0, 0.05);
@@ -1320,7 +1319,7 @@ div {
 }
 
 .index .block-six .container .right {
-  max-width: 706px;
+
   width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 5.30815px 72.987px rgba(0, 0, 0, 0.05);
@@ -1941,10 +1940,10 @@ div {
   margin-right: 7px;
 }
 
-.wall-avatar {
-  max-width: 240px;
-  width: 100%;
-}
+/*.wall-avatar {*/
+/*  max-width: 240px;*/
+/*  width: 100%;*/
+/*}*/
 
 .wall-avatar .avatar-block {
   padding: 28px;
@@ -5118,7 +5117,8 @@ div {
   }
 
   .index .block-five .container .sidebar {
-    display: none;
+    margin-top: 40px;
+    /*display: none;*/
   }
 
   .index .block-six {

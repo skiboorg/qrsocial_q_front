@@ -6,7 +6,7 @@
 
         <div class="container">
           <GirlProfileSideBar/>
-          <GirlAvatarSideBar/>
+          <GirlAvatarSideBar />
           <div class="wall-info info womanwall">
             <GirlMenu/>
             <router-view />
