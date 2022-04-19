@@ -4,7 +4,6 @@
     <div class="">
       <video class="live-video" autoplay loop muted>
               <source src="/vid.mp4" type="video/mp4">
-
               Your browser does not support HTML video.
             </video>
     </div>
@@ -18,7 +17,6 @@
         toggle-text-color="white"
         color="grey-3"
         text-color="grey-7"
-
         :options="[
           {label: '排行榜', value: 'tab1'},
           {label: '排行榜', value: 'tab2'}

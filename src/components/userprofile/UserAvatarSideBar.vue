@@ -51,9 +51,14 @@ export default {
   },
   methods:{
     ... mapActions('auth',['logoutUser']),
-    logout(){
+    async logout(){
+      document.cookie = 'auth_token' +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+      await this.$api.post('/auth/token/logout/')
+      this.$api.defaults.headers.common['Authorization'] = null
+      console.log(this.$api.defaults.headers.common)
+      // window.location.href='/'
       this.logoutUser()
-      this.$router.push('/')
+      await this.$router.push('/')
     }
   }
 

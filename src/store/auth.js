@@ -87,7 +87,7 @@ const actions = {
       })
 
   },
-  async getUser ({commit,dispatch},redirect){
+  async getUser1 ({commit,dispatch},redirect){
     console.log('getting user')
 
    const response = await api.get( '/api/v1/user/me/')
@@ -100,8 +100,31 @@ const actions = {
       }
     redirect ? await this.$router.push('/') : null
   },
+   async getUser ({commit,dispatch},redirect) {
+    console.log('getting user')
+    try {
+       const response = await api.get('/api/v1/user/me/')
+    //console.log('getUser', response.data)
+    commit('updateUser', response.data)
+    commit('updateUserStatus', true)
+     if (!process.env.SERVER) {
+          dispatch('connectWS', response.data.id)
+        }
+    redirect ? await this.$router.push('/') : null
+    }catch (e) {
 
-  logoutUser({commit}){
+      console.log(e)
+      api.defaults.headers.common['Authorization'] = null
+      if (!process.env.SERVER) {
+           Cookies.remove('auth_token')
+        }
+
+       this.$router.push('/')
+    }
+
+  },
+
+  logoutUser1({commit}){
     api.post( '/auth/token/logout/')
       .then(response=>{
         console.log('logoutUser', response)
@@ -113,6 +136,10 @@ const actions = {
       })
       .catch(function (error) {
       })
+  },
+  logoutUser({commit}){
+   commit('updateUser', {})
+    commit('updateUserStatus', false)
   }
 }
 
