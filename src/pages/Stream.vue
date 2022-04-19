@@ -3,7 +3,7 @@
      <div class="stream-grid q-mb-lg">
     <div class="">
       <video class="live-video" autoplay loop muted>
-              <source src="~assets/vid.mp4" type="video/mp4">
+              <source src="/vid.mp4" type="video/mp4">
 
               Your browser does not support HTML video.
             </video>
