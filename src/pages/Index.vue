@@ -15,11 +15,12 @@
       <div class="block-two">
         <div class="container">
           <div class="live">
-            <video class="live-video" autoplay loop muted>
-              <source src="/vid.mp4" type="video/mp4">
+            <img style="width: 100%;height: auto;border-radius: 30px" src="http://cdn.discordapp.com/attachments/525021707027873822/965946791419842600/611.jpg" alt="">
+<!--            <video class="live-video" autoplay loop muted>-->
+<!--              <source src="/vid.mp4" type="video/mp4">-->
 
-              Your browser does not support HTML video.
-            </video>
+<!--              Your browser does not support HTML video.-->
+<!--            </video>-->
 
           </div>
           <div class="vip-block">
