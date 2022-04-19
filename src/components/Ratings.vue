@@ -2,8 +2,8 @@
 <div class="switch">
                       <!--                      -->
                       <div class="switch-inner " :class="{'active-right':!tariffSwitchStandart}"></div>
-                      <div class="switch-left" @click="tariffSwitchStandart=true"><p class="no-margin text-bold cursor-pointer">用户评分</p></div>
-                      <div class="switch-right" @click="tariffSwitchStandart=false"><p  class="no-margin text-bold cursor-pointer">女生评价</p></div>
+                      <div class="switch-left" @click="tariffSwitchStandart=true"><p class="no-margin text-bold cursor-pointer">사용자 평가</p></div>
+                      <div class="switch-right" @click="tariffSwitchStandart=false"><p  class="no-margin text-bold cursor-pointer">소녀들의 평가</p></div>
                     </div>
   <div class="q-mb-lg tabs">
     <q-tabs
@@ -13,8 +13,8 @@
         dense
         no-caps
       >
-        <q-tab :ripple="false" name="1"  label="每天" />
-        <q-tab :ripple="false" name="2"  label="一周内" />
+        <q-tab :ripple="false" name="1"  label="日常的" />
+        <q-tab :ripple="false" name="2"  label="每周" />
         <q-tab :ripple="false" name="3"  label="每月" />
       </q-tabs>
   </div>
@@ -46,7 +46,7 @@
 <!--                    </div>-->
 
                   </div>
-                  <div v-if="blockType==='page'" class=" flex items-center justify-center text-caption"><span class="text-grey-6">在礼物上花费了</span> <img class="q-mx-xs" src="~assets/diamond.svg" alt="">127,050 “水晶”</div>
+                  <div v-if="blockType==='page'" class=" flex items-center justify-center text-caption"><span class="text-grey-6">모두보기</span> <img class="q-mx-xs" src="~assets/diamond.svg" alt="">127,050 “水晶”</div>
                 </div>
 
               </div>
@@ -83,7 +83,7 @@ export default {
 </script>
 <style lang="sass" scoped>
 .switch
-  max-width: 225px
+  max-width: 90%
   margin: 0 auto 25px
   justify-content: space-between
   height: 40px

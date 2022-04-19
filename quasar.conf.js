@@ -51,10 +51,10 @@ module.exports = configure(function (ctx) {
        vueRouterMode: 'history', // available values: 'hash', 'history'
       env: {
         //API: 'https://meat-coal.ru'
-         //API: 'http://localhost:8000',
-          API: 'https://9b6cfca3169942.localhost.run/',
-         //WS: 'ws://localhost:8000'
-         WS: 'wss://9b6cfca3169942.localhost.run/'
+         API: 'http://localhost:8000',
+          //API: 'https://9b6cfca3169942.localhost.run/',
+         WS: 'ws://localhost:8000'
+         //WS: 'wss://9b6cfca3169942.localhost.run/'
 
       },
       // transpile: false,

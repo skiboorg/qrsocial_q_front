@@ -2,12 +2,12 @@
   <footer class="footer">
 	<div class="container">
 		<div class="footer-top">
-			<div class="footer-nav">我们的女孩</div>
-			<div class="footer-nav">社会团体</div>
-			<div class="footer-nav">我们的广播</div>
-			<div class="footer-nav">广播类别</div>
+			<div class="footer-nav">우리 소녀</div>
+			<div class="footer-nav">소셜 그룹</div>
+			<div class="footer-nav">우리 방송</div>
+			<div class="footer-nav">방송 카테고리</div>
 		</div>
-		<div class="copyright">vipjr.com 版权所有 (2008- 2020) 翻印必究</div>
+		<div class="copyright">qrspicy.com 판권 소유 (C) 2022</div>
 	</div>
 </footer>
 </template>

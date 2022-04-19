@@ -4,7 +4,7 @@
     <q-page-container>
       <q-page  class="main ">
         <div class="container">
-                  <UserSideBar/>
+                  <UserSideBar v-if="$route.name !== 'stream-page'"/>
  <router-view />
         </div>
 

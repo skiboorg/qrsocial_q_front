@@ -5,8 +5,9 @@
       <div class="block-one">
         <div class="container">
           <div class="title">
-            <div class="h1">来自俄罗斯的美丽 女孩在我们的网 站上见面并交流！</div>
-            <div class="h2">给予礼物，通过等级提升女孩，结识并开始 一段恋爱关系！我们的平台将人们聚集在一起</div>
+            <div class="h1">러시아의 아름다운 소녀들이 우리 사이트에서 만나고 소통합니다!</div>
+            <div class="h2">선물을 주고, 소녀들을 레벨업하고, 만나고 관계를 시작하세요!
+우리의 플랫폼은 사람들을 하나로 모읍니다</div>
           </div>
         </div>
 
@@ -31,55 +32,56 @@
           <div class="params">
             <img class="params1" src="~assets/params1.svg" alt="params">
             <div class="text">
-              <div class="text1">无语言障碍</div>
-              <div class="text2">自动翻译器 在从语音到文本的流上。 聊天也被翻译</div>
+              <div class="text1">언어 장벽 없음</div>
+              <div class="text2">음성에서 텍스트로의 스트림에 대한 자동 번역기. 채팅도 번역됩니다</div>
             </div>
           </div>
           <div class="params">
             <img class="params2" src="~assets/params2.svg" alt="params">
             <div class="text">
-              <div class="text1">在线流媒体</div>
-              <div class="text2">女孩们每天都会广播一些东西：游戏、烹饪、运动或社交</div>
+              <div class="text1">온라인 스트리밍</div>
+              <div class="text2">소녀들은 매일 게임, 요리, 스포츠 또는 사교 활동을 방송합니다.</div>
             </div>
           </div>
           <div class="params">
             <img class="params3" src="~assets/params3.svg" alt="params">
             <div class="text">
-              <div class="text1">24/7 全天候通信</div>
-              <div class="text2">和聊天，流，和 tiktok 全天候</div>
+              <div class="text1">24/7 전천후 통신</div>
+              <div class="text2">24시간 연중무휴 채팅, 스트리밍, 틱톡</div>
             </div>
           </div>
           <div class="params">
             <img class="params4" src="~assets/params4.svg" alt="params">
             <div class="text">
-              <div class="text1">贵宾俱乐部</div>
-              <div class="text2">为最老练的观众提供的高级功能</div>
+              <div class="text1">VIP 클럽</div>
+              <div class="text2">가장 정교한 청중을 위한 프리미엄 기능</div>
             </div>
           </div>
           <div class="params">
             <img class="params5" src="~assets/params5.svg" alt="params">
             <div class="text">
-              <div class="text1">)女孩简介</div>
-              <div class="text2">女孩发布唱片、照片、专辑和短视频</div>
+              <div class="text1">여자 프로필</div>
+              <div class="text2">소녀들은 기록, 사진, 앨범 및 짧은 비디오를 게시합니다.</div>
             </div>
           </div>
           <div class="params">
             <img class="params6" src="~assets/params6.svg" alt="params">
             <div class="text">
-              <div class="text1">目标是来中国学习</div>
-              <div class="text2">收集到的捐款，女孩将在中国生活，学习中国文化和语言</div>
+              <div class="text1">목표는 중국 유학</div>
+              <div class="text2">모인 기부금으로 소녀들은 중국에 살면서 중국 문화와 언어를 배우게 됩니다.</div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="block-four">
         <div class="container">
           <div class="top">
             <div class="left">
               <img class="fire" src="~assets/fire.svg" alt="fire">
-              <div class="text">我们的辣妹</div>
+              <div class="text">우리 아가씨들</div>
             </div>
-            <div class="right"><router-link  :to="{name:'girls-page'}">查看全部 ></router-link> </div>
+            <div class="right"><router-link  :to="{name:'girls-page'}">모두보기</router-link> </div>
           </div>
           <div  class="bottom girls-grid">
             <GirlCardIndex v-for="girl in topStreamers" :key="girl.id" :user="girl"/>
@@ -89,14 +91,14 @@
       <div class="block-five">
         <div class="container">
           <div class="content">
-            <div v-if="false" class="tv">
+            <div class="tv">
               <div class="top">
                 <div class="left">
                   <img class="icon" src="~assets/tv.svg" alt="tv">
-                  <div class="text">我们的辣妹</div>
+                  <div class="text">스트리밍 및 방송</div>
                 </div>
 
-                <div class="right"><router-link  :to="{name:'streams-page'}">查看全部 ></router-link> </div>
+                <div class="right"><router-link  :to="{name:'streams-page'}">모두보기</router-link> </div>
               </div>
               <div class="bottom  ">
                 <StreamIndexCard v-for="stream in topStreams" :key="stream.id" :item="stream"/>
@@ -107,10 +109,10 @@
               <div class="top">
                 <div class="left">
                   <img class="tt" src="~assets/tiktok.svg" alt="tv">
-                  <div class="text">最新的女孩短片</div>
+                  <div class="text">최신 여자 반바지</div>
                 </div>
 
-                <div class="right"><router-link  :to="{name:'tiktok-page'}">查看全部 ></router-link> </div>
+                <div class="right"><router-link  :to="{name:'tiktok-page'}">모두보기</router-link> </div>
               </div>
               <div class="bottom tiktok-grid">
 
@@ -147,7 +149,7 @@
               <div class="top">
                 <div class="left">
                   <img class="ph" src="~assets/photo.svg" alt="fire">
-                  <div class="text">女孩的最新照片和相册</div>
+                  <div class="text">소녀의 최신 사진 및 사진 앨범</div>
                 </div>
 
               </div>
@@ -176,10 +178,13 @@
             <div class="right favorite-block">
               <div class="flex items-center q-pa-lg">
                 <img class="q-mr-md " src="~assets/rating.svg" alt="fire">
-              <div class="title">门户评级</div>
+              <div class="title">논평</div>
               </div>
               <Ratings block-type="index"/>
-              <q-btn @click="$router.push({name:'rating-page'})"  label="查看全部" class="btn full-width text-h6" color="primary"/>
+              <div class="text-center q-pa-md">
+                 <q-btn @click="$router.push({name:'rating-page'})" unelevated label="모두보기" rounded class="btn full-width text-body1" color="primary"/>
+              </div>
+
             </div>
 
           </div>
@@ -191,11 +196,11 @@
             <div class="top">
                 <div class="flex items-center">
                    <img class="ph q-mr-md " src="~assets/pin.svg" alt="fire">
-                  <div class="l">我们的博客和门户新闻</div>
+                  <div class="l">블로그 및 포털 뉴스</div>
 
                 </div>
 
-              <div class="r"><router-link  :to="{name:'blogs-page'}">查看全部 ></router-link></div>
+              <div class="r"><router-link  :to="{name:'blogs-page'}">모두보기</router-link></div>
 
             </div>
             <div class="content">
@@ -211,41 +216,40 @@
             <div class="top">
               <div class="flex items-center">
                   <img class="ph q-mr-md " src="~assets/info.svg" alt="fire">
-                  <div class="l">常见问题</div>
+                  <div class="l">자주하는 질문</div>
                 </div>
             </div>
             <div class="content">
               <q-list class="text-dark">
                 <q-expansion-item
                   group="somegroup"
-                  label="访问您的平台是否需要付费？"
+                  label="1. 플랫폼에 액세스하는 데 요금이 있습니까？"
 
                   default-opened>
                   <q-card>
                     <q-card-section>
-                     - 是的，访问是付费的，因为我们为我们的女孩提供了收到的资金。 您可以在网站上注册后选择并支付订阅费用。
+                     - 예, 우리가 소녀들에게 받는 기금을 제공할 때 액세스 권한이 지급됩니다. 웹사이트에서 등록한 후 구독을 선택하고 지불할 수 있습니다.
                     </q-card-section>
                   </q-card>
                 </q-expansion-item>
-                <q-expansion-item group="somegroup" label="女孩多久发一次帖子？">
+                <q-expansion-item group="somegroup" label="2. 소녀들은 얼마나 자주 포스팅을 하나요?">
                   <q-card>
                     <q-card-section>
-                      - 每个女孩都有自己的流媒体和出版物时间表，这仅取决于她在工作或学校的工作。 这些信息可以在女孩自己的私信中找到。
+                      - 모든 소녀에게는 자신만의 스트리밍 및 출판 일정이 있으며, 이는 그녀가 직장이나 학교에서 무엇을 하는지에 달려 있습니다. 이 정보는 소녀들의 개인 메시지에서 찾을 수 있습니다.
                     </q-card-section>
                   </q-card>
                 </q-expansion-item>
-                <q-expansion-item group="somegroup" label="你是如何处理语言障碍问题的？">
+                <q-expansion-item group="somegroup" label="3. 언어 장벽을 어떻게 처리합니까?">
                   <q-card>
                     <q-card-section>
-                      - 在与女孩的在线聊天中，一个自动翻译器：您会看到所有消息都是您的母语，而女孩则是俄语。
-我们的同声翻译在广播中工作，在广播中显示中文翻译文本。
+                      - 소녀들과의 온라인 채팅에서 자동 번역기: 모든 메시지는 모국어로, 소녀는 러시아어로 되어 있음을 알 수 있습니다. 우리 동시통역기는 중국어 번역 텍스트가 표시되는 방송에서 작동합니다.
                     </q-card-section>
                   </q-card>
                 </q-expansion-item>
-                <q-expansion-item group="somegroup" label="您的平台提供哪些功能？">
+                <q-expansion-item group="somegroup" label="4. 귀하의 플랫폼은 어떤 기능을 제공합니까?">
                   <q-card>
                     <q-card-section>
-                      - 可以在此处阅读平台和指南的全部功能。
+                      - 플랫폼 및 가이드의 전체 기능은 여기에서 읽을 수 있습니다.
                     </q-card-section>
                   </q-card>
                 </q-expansion-item>
@@ -258,8 +262,8 @@
       </div>
       <div class="block-seven">
         <div class="container">
-          <div class="h1">今天开始</div>
-          <div class="h2">选择正确的计划并开始与女孩聊天</div>
+          <div class="h1">오늘부터</div>
+          <div class="h2">올바른 계획을 선택하고 소녀들과 채팅을 시작하세요</div>
           <div class="content">
             <div class="l">
               <div class="data" :class="{'vip':!tariffSwitchStandart}">
@@ -268,11 +272,11 @@
                     <div class="switch">
                       <!--                      -->
                       <div class="switch-inner " :class="{'active-right':!tariffSwitchStandart}"></div>
-                      <div class="switch-left" @click="tariffSwitchStandart=true"><p class="no-margin text-bold cursor-pointer">简单的资费</p></div>
-                      <div class="switch-right" @click="tariffSwitchStandart=false"><p  class="no-margin text-bold cursor-pointer">VIP订阅</p></div>
+                      <div class="switch-left" @click="tariffSwitchStandart=true"><p class="no-margin text-bold cursor-pointer">단순 관세</p></div>
+                      <div class="switch-right" @click="tariffSwitchStandart=false"><p  class="no-margin text-bold cursor-pointer">VIP 구독</p></div>
                     </div>
                   </div>
-                  <div class="select">包括的功能有：</div>
+                  <div class="select">포함된 기능은 다음과 같습니다：</div>
                   <div class="params " :class="{active:item.active}" v-for="item in tariffSwitchStandart ? standartTariff.params : vipTariff.params">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect opacity="0.2" x="1" y="1" width="26" height="26" rx="3.42105" stroke="#F64953" stroke-width="2"/>
@@ -302,24 +306,22 @@
                     <p class="q-mb-none text-bold text-dark text-h5"><span class="text-body1 text-bold">Y</span>{{tariff.price}}.00</p>
                   </div>
 
-                  <div class="btn2">选择一个计划</div>
+                  <div class="btn2">계획을 선택</div>
                 </div>
               </div>
 
             </div>
             <div class="tariff-info">
-              <p class="text-dark text-h6">支付规则</p>
-              <p>订阅付款步骤：</p>
-
-                <p>1. 您在网站上注册</p>
-                <p>2. 进入站点</p>
-                <p>3. 选择订阅并付款</p>
-                <p>4. 使用我们的平台</p>
-
-              <p class="text-body2">用户到期后，您决定续订多长时间！ 每次订阅都是手动更新的，我们没有自动订阅。<br>
-当订阅到期时，您的所有数据都会被保存，续订后您可以再次使用该平台。</p>
+              <p class="text-dark text-h6">지불 규칙</p>
+              <p>구독 결제 단계:</p>
+                <p>1. 웹사이트에서 회원가입</p>
+                <p>2. 사이트 입력</p>
+                <p>3. 구독 선택 및 결제</p>
+                <p>4. 당사 플랫폼 사용</p>
+              <p class="text-body2">사용자가 만료된 후 구독 갱신 기간을 결정합니다! 모든 구독은 수동으로 갱신되며 자동 구독은 없습니다.
+구독이 만료되면 모든 데이터가 저장되며 갱신 후 플랫폼을 다시 사용할 수 있습니다.</p>
               <q-separator spaced="lg"/>
-              <p class="text-dark text-h6">我们支持付款</p>
+              <p class="text-dark text-h6">우리는 지불을 지원합니다</p>
               <div class="flex justify-between">
                 <img src="~assets/ali-p.png" alt="">
                 <img src="~assets/we-p.png" alt="">
@@ -416,11 +418,11 @@ export default {
       ],
       standartTariff:{
         params:[
-          {name:'沟通 24 乘 7',active:true},
-          {name:'参与直播并赠送礼物',active:true},
-          {name:'女孩简介：照片、视频、录音',active:true},
-          {name:'VIP 俱乐部：特别专辑、流媒体、视频',active:false},
-          {name:'增加关注和响应保证',active:false},
+          {name:'24번 소통 7',active:true},
+          {name:'생방송 참여 및 선물 증정',active:true},
+          {name:'소녀 프로필: 사진, 비디오, 오디오 녹음',active:true},
+          {name:'VIP 클럽: 스페셜 앨범, 스트리밍, 비디오',active:false},
+          {name:'관심 및 응답 보장 증가',active:false},
         ],
         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat tristique vestibulum mi.\n' +
           '\n' +
@@ -428,11 +430,11 @@ export default {
       },
       vipTariff:{
         params:[
-          {name:'沟通 24 乘 7',active:true},
-          {name:'参与直播并赠送礼物',active:true},
-          {name:'女孩简介：照片、视频、录音',active:true},
-          {name:'VIP 俱乐部：特别专辑、流媒体、视频',active:true},
-          {name:'增加关注和响应保证',active:true},
+          {name:'24번 소통 7',active:true},
+          {name:'생방송 참여 및 선물 증정',active:true},
+          {name:'소녀 프로필: 사진, 비디오, 오디오 녹음',active:true},
+          {name:'VIP 클럽: 스페셜 앨범, 스트리밍, 비디오',active:true},
+          {name:'관심 및 응답 보장 증가',active:true},
         ],
         text:'1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat tristique vestibulum mi.\n' +
           '\n' +
@@ -503,3 +505,22 @@ export default {
   }
 }
 </script>
+<style lang="sass">
+.features
+  display: grid
+  grid-template-columns: repeat(auto-fit,minmax(220px, 1fr))
+  grid-gap: 24px
+  margin-top: 24px
+  max-width: 1440px
+  margin: 0 auto
+
+
+  &-item
+    width: 100%
+    height: 356px
+    border-radius: 30px
+    padding: 20px 20px 50px 20px
+    background-size: cover !important
+    &.item1
+      background: url(~assets/f1.png) no-repeat center
+</style>

@@ -1,7 +1,7 @@
 <template>
 <!-- blur -->
   <div class="block cursor-pointer" :class="{'blur':stream.is_vip}">
-    <router-link to="/">
+    <router-link :to="{name:'stream-page'}">
       <div class="photo">
 						<img class="image" :src="stream.image" alt="photo">
 						<div class="date text-white">{{ new Date (stream.date).toLocaleDateString()}}</div>

@@ -40,6 +40,7 @@ const routes = [
 
       { path: 'tiktok',name:'tiktok-page', component: () => import('pages/TickTokPage.vue') },
       { path: 'streams',name:'streams-page', component: () => import('pages/Streams.vue') },
+      { path: 'stream',name:'stream-page', component: () => import('pages/Stream.vue') },
       { path: 'blogs',name:'blogs-page', component: () => import('pages/BlogsPage.vue') },
       { path: 'blogs/:name_slug',name:'blog-page', component: () => import('pages/BlogPage.vue') },
     ]
