@@ -1,6 +1,6 @@
 <template>
   <div class="subscribe backblock">
-    <div class="h1">礼物历史</div>
+    <div class="h1">선물 내역</div>
     <div class="subblock">
       <!--        :class="{'bg-green-1':  gift.answer_text}"-->
       <div class="cursor-pointer"  @click="cur_gift=index,giftModalActive=true" v-for="(gift,index) in sended_gift" :key="gift.id">

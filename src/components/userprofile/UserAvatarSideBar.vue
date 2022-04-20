@@ -8,12 +8,12 @@
         </div>
 
 
-				<div class="edit cursor-pointer " @click="$router.push({name:'user-profile-settings'})">我的设置</div>
-				<div class="edit cursor-pointer text-primary" @click="logout">注销</div>
-				<div v-if="!$auth.user.is_vip" class="key cursor-pointer" @click="$router.push({name:'faq-guidevip'})"><img src="~assets/key.svg" alt="key">排行榜 VIP</div>
+				<div class="edit cursor-pointer " @click="$router.push({name:'user-profile-settings'})">내 설정</div>
+				<div class="edit cursor-pointer text-primary" @click="logout">로그 아웃</div>
+				<div v-if="!$auth.user.is_vip" class="key cursor-pointer" @click="$router.push({name:'faq-guidevip'})"><img src="~assets/key.svg" alt="key">리더보드 VIP</div>
 			</div>
 			<div v-if="$auth.user.own_friend_list[0].friend_list.length > 0" class="favorite-block backblock">
-				<div class="favorite">收藏夹</div>
+				<div class="favorite">즐겨찾기</div>
 				<div class="favorite-grid">
           <div
             class="cursor-pointer"
@@ -34,7 +34,7 @@
 
 
 				</div>
-				<div class="showall cursor-pointer" @click="$router.push({name:'user-profile-friends'})">显示全部</div>
+				<div class="showall cursor-pointer" @click="$router.push({name:'user-profile-friends'})">모두 표시</div>
 			</div>
 		</div>
 </template>

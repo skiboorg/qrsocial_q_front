@@ -1,6 +1,6 @@
 <template>
   <div class="settings backblock">
-    <div class="h1">我的设置</div>
+    <div class="h1">내 설정</div>
     <div class="infoblock">
       <div class="settings-l">
         <div class="progress">
@@ -8,15 +8,15 @@
             <img :src="$auth.user.avatar">
           </q-avatar>
           <div class="title">
-            <div class="h2 q-mb-md">改变我的头像</div>
+            <div class="h2 q-mb-md">내 아바타 변경</div>
             <label class="btn cursor-pointer user-avatar__btn shadow-2" for="avatar_img">
-              选择照片
+              사진을 선택
               <input id="avatar_img" ref="avatar_img" @change="avatarChange($event)" style="display: none" type="file">
             </label>
           </div>
         </div>
         <div class="category">
-          <div class="h2">设置类型</div>
+          <div class="h2">세트 유형</div>
           <div class="variant cursor-pointer personal "
                v-for="(tab,index) in tabs"
                :key="index"
@@ -34,11 +34,11 @@
       <div  class="settings-r">
         <div v-if="selectedTab===0" class="personal" >
           <div class="h2">{{tabs[selectedTab].name}}</div>
-          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.fio" label="姓名" />
+          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.fio" label="이름" />
 
-          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.nickname" label="昵称" />
-          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.birthday" label="出生日期" />
-          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.city" label="居住地" />
+          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.nickname" label="닉네임" />
+          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.birthday" label="생일" />
+          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.city" label="거주지" />
 
 
 
@@ -46,9 +46,9 @@
         <div v-if="selectedTab===1 || $q.screen.lt.md" class="about " >
           <div class="h2">{{tabs[selectedTab].name}}</div>
 
-          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.education" label="学习和教育" />
-          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.work_place" label="专业" />
-          <q-input filled type="textarea" bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.about" label="关于我" />
+          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.education" label="학습과 교육" />
+          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.work_place" label="직업" />
+          <q-input filled type="textarea" bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.about" label="나에 대해서" />
 
 
         </div>
@@ -63,7 +63,7 @@
             class="q-mb-sm"
             v-model="userData.tags"
             :options="tags"
-            label="兴趣标签"
+            label="관심 태그"
             multiple
             emit-value
             map-options
@@ -82,21 +82,21 @@
 
 
 
-          <q-input filled type="textarea" bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.interests" label="我的爱好" />
-          <q-input filled type="textarea" bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.interests_additional" label="最喜欢的艺术" />
+          <q-input filled type="textarea" bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.interests" label="내 취미" />
+          <q-input filled type="textarea" bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.interests_additional" label="좋아하는 예술" />
 
         </div>
         <div v-if="selectedTab===3 || $q.screen.lt.md" class="security ">
           <div class="h2">{{tabs[selectedTab].name}}</div>
-          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.password1" label="密码" />
-          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.password2" label="重复" />
+          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.password1" label="비밀번호" />
+          <q-input filled bg-color="white" class="q-mb-sm rounded-borders" v-model="userData.password2" label="반복하다" />
 
         </div>
         <p class="q-pt-lg q-px-md text-body2 text-grey-6">
-          这些设置对于使用我们的平台不是必需的，但它们可以帮助女孩更多地了解您并对您感兴趣！
+        이러한 설정은 당사 플랫폼을 사용하는 데 필요하지 않지만 소녀들이 귀하에 대해 더 많이 배우고 귀하에게 관심을 갖는 데 도움이 될 수 있습니다!
         </p>
         <div class="text-center ">
-          <q-btn  :loading="is_loading" @click="updateUser" label="保存更改"  no-caps type="submit" rounded color="primary" class="q-px-xl q-py-sm text-bold"/>
+          <q-btn  :loading="is_loading" @click="updateUser" label="변경 사항을 저장하다"  no-caps type="submit" rounded color="primary" class="q-px-xl q-py-sm text-bold"/>
         </div>
 
       </div>
@@ -115,10 +115,10 @@ export default {
     return {
       is_loading:false,
       tabs:[
-        {name:'个人设置'},
-        {name:'关于我'},
-        {name:'兴趣爱好'},
-        {name:'安全'},
+        {name:'개인 설정'},
+        {name:'나에 대해서'},
+        {name:'나에 대해서'},
+        {name:'안전'},
       ],
       tags:[],
       selectedTab:0,
