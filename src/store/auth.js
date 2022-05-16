@@ -100,7 +100,7 @@ const actions = {
       }
     redirect ? await this.$router.push('/') : null
   },
-   async getUser ({commit,dispatch},redirect) {
+   async getUser ({commit,dispatch,state},redirect) {
     console.log('getting user')
     try {
        const response = await api.get('/api/v1/user/me/')
@@ -110,7 +110,10 @@ const actions = {
      if (!process.env.SERVER) {
           dispatch('connectWS', response.data.id)
         }
-    redirect ? await this.$router.push('/') : null
+        if(redirect){
+          state.user.is_streamer ? await this.$router.push('/girl/lk/info') : await this.$router.push('/')
+        }
+
     }catch (e) {
 
       console.log(e)

@@ -73,10 +73,23 @@ const routes = [
     ]
   },
   {
+    path: '/girl-login',
+    component: () => import('layouts/EmptyLayout.vue'),
+    children: [
+      { path: '',name:'girl-auth', component: () => import('pages/Girl/Auth.vue') },
+    ]
+  },
+  {
+    path: '/girl-register',
+    component: () => import('layouts/EmptyLayout.vue'),
+    children: [
+      { path: '',name:'girl-register', component: () => import('pages/Girl/Register.vue') },
+    ]
+  },
+  {
     path: '/girl',
     component: () => import('layouts/GirlLkLayout.vue'),
     children: [
-      { path: 'auth',name:'girl-auth', component: () => import('pages/Girl/Auth.vue') },
       { path: 'lk/info',name:'girl-info', component: () => import('pages/Girl/Info.vue') },
       { path: 'lk/posts',name:'girl-posts', component: () => import('pages/Girl/Posts.vue') },
       { path: 'lk/chats',name:'girl-chats', component: () => import('pages/Girl/Chats.vue') },
@@ -85,8 +98,6 @@ const routes = [
       { path: 'lk/video',name:'girl-video', component: () => import('pages/Girl/Videos.vue') },
       { path: 'lk/gift',name:'girl-gifts', component: () => import('pages/Girl/Gifts.vue') },
       { path: 'lk/fans',name:'girl-fans', component: () => import('pages/Girl/Fans.vue') },
-
-
     ]
   },
 
