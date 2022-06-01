@@ -4,7 +4,7 @@
 
 
     <q-page-container>
-      <q-page  class="main ">
+      <q-page style="margin-top: 180px"  class="main ">
         <div class="container" :class="{'chat-m':!show}">
           <UserSideBar v-if="show"/>
           <UserAvatarSideBar v-if="!lk_settings" />

@@ -370,7 +370,8 @@ div {
 
 .header.logged.page {
   background: #fff;
-  position: unset;
+  position: fixed;
+  top: 0;
 }
 
 .header.logged.page .header-logo_white {

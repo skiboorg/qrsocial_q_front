@@ -1,6 +1,7 @@
 // app global css in Sass form
 body
   font-family: 'Ubuntu', sans-serif
+  overflow-x: hidden
 a
   text-decoration: none !important
   text-decoration-line: none !important
@@ -45,6 +46,11 @@ a
     width: 100%
     height: 100%
     object-fit: cover
+.header
+  &.logged
+  &.page
+    position: fixed
+    top: 0
 @media (max-width: 1140px)
   .index .block-five .container
     grid-template-columns: 1fr
@@ -121,6 +127,7 @@ a
 .header
   &.logged
   &.page
+
     & .logomob
       display: none
     & .header-right

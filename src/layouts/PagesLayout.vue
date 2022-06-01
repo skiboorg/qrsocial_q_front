@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
   <Header/>
     <q-page-container>
-      <q-page  class="main ">
+      <q-page style="margin-top: 180px" class="main ">
         <div class="container">
                   <UserSideBar v-if="$route.name !== 'stream-page'"/>
  <router-view />
