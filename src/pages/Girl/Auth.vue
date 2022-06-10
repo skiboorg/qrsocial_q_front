@@ -2,7 +2,7 @@
   <q-page >
 <div class="window">
 	<div class="left">
-		<img class="logo q-mb-xl" src="~assets/header-logo_white.svg" alt="logo">
+		<img class="logo q-mb-xl" src="~assets/lw.png" alt="logo">
 		<div class="text-h4 q-mb-md">Meet, chat, make friends,<br>
 watch live streams and have fun!
 </div>
@@ -16,10 +16,10 @@ watch live streams and have fun!
             filled
             :dense="!$q.screen.gt.md"
             v-model="userLogin.wechatid"
-            label="WechatID *"
+            label="Phone *"
 
             lazy-rules
-            :rules="[ val => val && val.length > 0 || '微信ID']"
+            :rules="[ val => val && val.length > 0 || 'Not be empty']"
           />
           <q-input
             :dense="!$q.screen.gt.md"
@@ -28,7 +28,7 @@ watch live streams and have fun!
             v-model="userLogin.password"
             label="Password *"
             lazy-rules
-            :rules="[val => val !== null && val !== '' || '密码' ]"
+            :rules="[val => val !== null && val !== '' || 'Not be empty' ]"
           >
             <template v-slot:append>
               <q-icon

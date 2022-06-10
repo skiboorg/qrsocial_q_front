@@ -161,7 +161,7 @@ export default {
       let formData = new FormData()
       formData.set('message', JSON.stringify(this.message))
       formData.set('image',this.file)
-      formData.set('message_lang',"zh")
+      formData.set('message_lang',"ko")
       formData.set('stiker',stiker_id)//
       console.log(formData)
       await this.$api({

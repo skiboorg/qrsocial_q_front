@@ -1,11 +1,11 @@
 <template>
   <div class="settings backblock">
     <div class="q-px-md text-dark">
-          <p class="text-h6 text-dark q-mb-sm q-pt-md">Инструкции по профилю::</p>
+          <p class="text-h6 text-dark q-mb-sm q-pt-md">Инструкции по профилю:</p>
          <p class="text-caption text-dark">
     - максимально подробно заполните свой профиль<br>
-- при заполнении профиля переводите исходный текст на китайский упрощенный<br>
-- <a target="_blank" class="text-primary" href="https://translate.google.com/?sl=ru&tl=zh-CN&op=translate">translate.google.com/?sl=ru&tl=zh-CN&op=translate</a><br>
+- при заполнении профиля переводите исходный текст на корейский<br>
+- <a target="_blank" class="text-primary" href="https://translate.google.com/?sl=ru&tl=ko&op=translate">https://translate.google.com/?sl=ru&tl=ko&op=translate</a><br>
 - чем больше информации вы укажете, тем более интересны вы будете для клиента<br>
          </p>
         <q-separator/>

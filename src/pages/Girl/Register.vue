@@ -2,7 +2,7 @@
   <q-page >
     <div class="window">
 	<div class="left">
-		<img class="logo q-mb-xl" src="~assets/header-logo_white.svg" alt="logo">
+		<img class="logo q-mb-xl" src="~assets/lw.png" alt="logo">
 				<div class="text-h4 q-mb-md">Meet, chat, make friends,<br>
 watch live streams and have fun!
 </div>
@@ -19,16 +19,16 @@ watch live streams and have fun!
             label="Email *"
             lazy-rules
             :rules="[
-              val => val && val.length > 0 || '电子邮件',
-              val => email_re.test(String(val)) || '电子邮件'
+              val => val && val.length > 0 || 'Not be empty',
+              val => email_re.test(String(val)) || 'Bad email'
               ]"/><!--    email      -->
        <q-input
             filled
             :dense="!$q.screen.gt.md"
             v-model="userRegister.wechatid"
-            label="WeChatID *"
+            label="Phone *"
             lazy-rules
-            :rules="[val => val !== null && val !== '' || '微信ID']"
+            :rules="[val => val !== null && val !== '' || 'Not be empty']"
           />
        <q-input
             filled
@@ -36,7 +36,7 @@ watch live streams and have fun!
             v-model="userRegister.fio"
             label="Name *"
             lazy-rules
-            :rules="[val => val !== null && val !== '' || '姓名']"
+            :rules="[val => val !== null && val !== '' || 'Not be empty']"
           />
          <q-input
             filled
@@ -44,7 +44,7 @@ watch live streams and have fun!
             v-model="userRegister.nickname"
             label="Nickname *"
             lazy-rules
-            :rules="[val => val !== null && val !== '' || '昵称']"
+            :rules="[val => val !== null && val !== '' || 'Not be empty']"
           />
           <q-input
             filled
@@ -53,7 +53,7 @@ watch live streams and have fun!
             v-model="userRegister.password1"
             label="Password *"
             lazy-rules
-            :rules="[val => val !== null && val !== '' || '密码']"
+            :rules="[val => val !== null && val !== '' || 'Not be empty']"
           >
             <template v-slot:append>
               <q-icon
@@ -71,7 +71,7 @@ watch live streams and have fun!
             label="Repeat password *"
 
             lazy-rules
-            :rules="[val => val !== null && val !== '' || '密码', val => val===userRegister.password1 || '密码重复' ]"
+            :rules="[val => val !== null && val !== '' || 'Not be empty', val => val===userRegister.password1 || 'Passwords not match' ]"
           >
             <template v-slot:append>
               <q-icon
@@ -89,7 +89,8 @@ watch live streams and have fun!
          </div>
       <div class="flex items-center justify-between q-mt-md">
          <q-btn  :loading="is_loading" label="Register"  no-caps type="submit" rounded color="primary" class="q-px-xl q-py-sm text-bold q-mb-sm"/>
-       <p class="no-margin already">Already have an account?  <router-link :to="{name:'girl-auth'}">Enter the site</router-link> </p>
+       <p class=" already">Already have an account?  <router-link :to="{name:'girl-auth'}">Enter the site</router-link> </p>
+       <p class="no-margin already">After your registration, we will activate your profile within 24 hours.</p>
       </div>
 
         </q-form>

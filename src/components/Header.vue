@@ -9,8 +9,8 @@
 
       <div class="header-left">
 
-        <img @click="$router.push('/')" class="header-logo_white cursor-pointer" src="~assets/header-logo_white.svg" alt="header-logo">
-        <img @click="$router.push('/')" class="header-logo_black cursor-pointer" src="~assets/header-logo_black.svg" alt="header-logo">
+        <img @click="$router.push('/')" class="header-logo_white cursor-pointer" src="~assets/lw.png" alt="header-logo">
+        <img @click="$router.push('/')" class="header-logo_black cursor-pointer" src="~assets/lg.png" alt="header-logo">
 
         <div class="nav-menu">
 

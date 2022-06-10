@@ -2,7 +2,7 @@
   <q-page >
     <div class="window">
 	<div class="left">
-		<img class="logo q-mb-xl" src="~assets/header-logo_white.svg" alt="logo">
+		<img class="logo q-mb-xl" src="~assets/lw.png" alt="logo">
 		<div class="text-h4 q-mb-md">见面、聊天、结交朋友、<br>观看直播，玩得开心！</div>
 		<div class="text-h3 text-bold">没有语言障碍！</div>
 	</div>

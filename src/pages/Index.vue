@@ -28,53 +28,76 @@
           </div>
         </div>
       </div>
-      <div class="block-three">
+<!--      <div class="block-three">-->
+<!--        <div class="container">-->
+<!--          <div class="params">-->
+<!--            <img class="params1" src="~assets/params1.svg" alt="params">-->
+<!--            <div class="text">-->
+<!--              <div class="text1">언어 장벽 없음</div>-->
+<!--              <div class="text2">음성에서 텍스트로의 스트림에 대한 자동 번역기. 채팅도 번역됩니다</div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="params">-->
+<!--            <img class="params2" src="~assets/params2.svg" alt="params">-->
+<!--            <div class="text">-->
+<!--              <div class="text1">온라인 스트리밍</div>-->
+<!--              <div class="text2">소녀들은 매일 게임, 요리, 스포츠 또는 사교 활동을 방송합니다.</div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="params">-->
+<!--            <img class="params3" src="~assets/params3.svg" alt="params">-->
+<!--            <div class="text">-->
+<!--              <div class="text1">24/7 전천후 통신</div>-->
+<!--              <div class="text2">24시간 연중무휴 채팅, 스트리밍, 틱톡</div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="params">-->
+<!--            <img class="params4" src="~assets/params4.svg" alt="params">-->
+<!--            <div class="text">-->
+<!--              <div class="text1">VIP 클럽</div>-->
+<!--              <div class="text2">가장 정교한 청중을 위한 프리미엄 기능</div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="params">-->
+<!--            <img class="params5" src="~assets/params5.svg" alt="params">-->
+<!--            <div class="text">-->
+<!--              <div class="text1">여자 프로필</div>-->
+<!--              <div class="text2">소녀들은 기록, 사진, 앨범 및 짧은 비디오를 게시합니다.</div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="params">-->
+<!--            <img class="params6" src="~assets/params6.svg" alt="params">-->
+<!--            <div class="text">-->
+<!--              <div class="text1">목표는 중국 유학</div>-->
+<!--              <div class="text2">모인 기부금으로 소녀들은 중국에 살면서 중국 문화와 언어를 배우게 됩니다.</div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+      <div class="index-grid">
         <div class="container">
-          <div class="params">
-            <img class="params1" src="~assets/params1.svg" alt="params">
-            <div class="text">
-              <div class="text1">언어 장벽 없음</div>
-              <div class="text2">음성에서 텍스트로의 스트림에 대한 자동 번역기. 채팅도 번역됩니다</div>
+          <div class="index-grid-inner">
+            <div class="">
+              <img src="~assets/Block.png" alt="">
             </div>
-          </div>
-          <div class="params">
-            <img class="params2" src="~assets/params2.svg" alt="params">
-            <div class="text">
-              <div class="text1">온라인 스트리밍</div>
-              <div class="text2">소녀들은 매일 게임, 요리, 스포츠 또는 사교 활동을 방송합니다.</div>
+            <div class="">
+              <img src="~assets/Block-1.png" alt="">
             </div>
-          </div>
-          <div class="params">
-            <img class="params3" src="~assets/params3.svg" alt="params">
-            <div class="text">
-              <div class="text1">24/7 전천후 통신</div>
-              <div class="text2">24시간 연중무휴 채팅, 스트리밍, 틱톡</div>
+            <div class="">
+              <img src="~assets/Block-2.png" alt="">
             </div>
-          </div>
-          <div class="params">
-            <img class="params4" src="~assets/params4.svg" alt="params">
-            <div class="text">
-              <div class="text1">VIP 클럽</div>
-              <div class="text2">가장 정교한 청중을 위한 프리미엄 기능</div>
+            <div class="">
+              <img src="~assets/Block-3.png" alt="">
             </div>
-          </div>
-          <div class="params">
-            <img class="params5" src="~assets/params5.svg" alt="params">
-            <div class="text">
-              <div class="text1">여자 프로필</div>
-              <div class="text2">소녀들은 기록, 사진, 앨범 및 짧은 비디오를 게시합니다.</div>
+            <div class="">
+              <img src="~assets/Block-4.png" alt="">
             </div>
-          </div>
-          <div class="params">
-            <img class="params6" src="~assets/params6.svg" alt="params">
-            <div class="text">
-              <div class="text1">목표는 중국 유학</div>
-              <div class="text2">모인 기부금으로 소녀들은 중국에 살면서 중국 문화와 언어를 배우게 됩니다.</div>
+            <div class="">
+              <img src="~assets/Block-5.png" alt="">
             </div>
           </div>
         </div>
       </div>
-
       <div class="block-four">
         <div class="container">
           <div class="top">
@@ -617,5 +640,24 @@ export default {
       color: #F64953
       svg
         fill: #F64953
-
+.index-grid
+  margin-top: 50px
+  &-inner
+    display: grid
+    grid-template-columns: repeat(6,1fr)
+    grid-gap: 20px
+    img
+      width: 100%
+      height: auto
+      object-fit: contain
+@media (max-width: 1024px)
+  .index-grid
+    margin-top: 175px
+    &-inner
+      grid-template-columns: repeat(3,1fr)
+@media (max-width: 768px)
+  .index-grid
+    margin-top: 0
+    &-inner
+      grid-template-columns: repeat(2,1fr)
 </style>
