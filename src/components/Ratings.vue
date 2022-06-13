@@ -1,10 +1,10 @@
 <template>
-<div class="switch">
-                      <!--                      -->
-                      <div class="switch-inner " :class="{'active-right':!tariffSwitchStandart}"></div>
-                      <div class="switch-left" @click="tariffSwitchStandart=true"><p class="no-margin text-bold cursor-pointer">사용자 평가</p></div>
-                      <div class="switch-right" @click="tariffSwitchStandart=false"><p  class="no-margin text-bold cursor-pointer">소녀들의 평가</p></div>
-                    </div>
+<!--<div class="switch">-->
+<!--                      &lt;!&ndash;                      &ndash;&gt;-->
+<!--                      <div class="switch-inner " :class="{'active-right':!tariffSwitchStandart}"></div>-->
+<!--                      <div class="switch-left" @click="tariffSwitchStandart=true"><p class="no-margin text-bold cursor-pointer">사용자 평가</p></div>-->
+<!--                      <div class="switch-right" @click="tariffSwitchStandart=false"><p  class="no-margin text-bold cursor-pointer">소녀들의 평가</p></div>-->
+<!--                    </div>-->
   <div class="q-mb-lg tabs">
     <q-tabs
         v-model="tab"
@@ -13,9 +13,9 @@
         dense
         no-caps
       >
-        <q-tab :ripple="false" name="1"  label="日常的" />
-        <q-tab :ripple="false" name="2"  label="每周" />
-        <q-tab :ripple="false" name="3"  label="每月" />
+        <q-tab :ripple="false" name="1"  label="일일" />
+        <q-tab :ripple="false" name="2"  label="주간" />
+        <q-tab :ripple="false" name="3"  label="달마다" />
       </q-tabs>
   </div>
 

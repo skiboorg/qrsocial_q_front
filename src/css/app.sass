@@ -272,7 +272,7 @@ a
     z-index: -1
 .switch
   position: relative
-  background: rgba(246, 73, 83, 20%)
+  background: #FFFFFF
   border-radius: 55px
   width: 100%
   padding: 10px
@@ -291,12 +291,20 @@ a
     left: 10px
 
     background: #F64953
-    box-shadow: 0px 4px 25px rgba(246, 73, 83, 0.25)
+
     border-radius: 55px
     transition: all .2s linear
     z-index: -1
     &.active-right
       left: 48%
+  &-left
+    color: #8B919C
+    &.itemActive
+      color: #FFFFFF
+  &-right
+    color: #8B919C
+    &.itemActive
+      color: #FFFFFF
 
 
 .index .block-seven .container .content .l .data .one
@@ -314,32 +322,26 @@ a
   & .q-field--outlined .q-field__control:before
     border: 4px solid #F8D6D8
 .index .block-seven .container .content .l .data.vip
-  position: relative
-  border: 12px solid #FFFFFF
-  & .select
-    color: #FFFFFF
-  & .q-field--outlined .q-field__control:before
-    border: 4px solid #ffffff
-  & .one
-    background: radial-gradient(130.42% 71.71% at 147.52% 3.75%, #FFFFFF 0%, #FFB120 100%)
-    & .params .text
-      color: #d0d0d0
-    & .params.active .text
-      color: #FFFFFF
-  &::before
-    position: absolute
-    content: url(~assets/vip-stars.png)
-    top: -180px
-    right: -70px
+  & .tariff-wrapper
+    background: #1E212E
+    & .text
+      color: #FFFFFF !important
+  & .switch-inner
+    background: #F6C451 !important
+  & .switch
+    background: rgba(255, 255, 255, 0.05)
+  & .tariff-icon
+    fill : #F6C451 !important
+
+
 
 .q-item__label
     color: #3E4042
 .tariff-info
-  background: #FFFFFF
-  border: 1px solid #E2E2E2
+
   box-sizing: border-box
   border-radius: 16px
-  padding: 40px
+  padding: 0 40px
   color: #8994A1
 
 .chat-m
@@ -398,15 +400,20 @@ a
 
 .girls-grid
   display: grid
-  grid-template-columns: repeat(5,1fr)
+  grid-template-columns: repeat(auto-fill,minmax(160px, 160px))
+  grid-gap: 30px
+
+.girls-img-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill,minmax(250px, 250px))
   grid-gap: 30px
 
 .tiktok
   margin-top: 28px
   &-grid
     display: grid
-    grid-template-columns: repeat(5,1fr)
-    grid-gap: 10px
+    grid-template-columns: repeat(auto-fill,minmax(180px, 180px))
+    grid-gap: 30px
 
 .q-avatar
   img

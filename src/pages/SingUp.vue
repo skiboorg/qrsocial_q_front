@@ -3,8 +3,9 @@
     <div class="window">
 	<div class="left">
 		<img class="logo q-mb-xl" src="~assets/lw.png" alt="logo">
-		<div class="text-h4 q-mb-md">见面、聊天、结交朋友、<br>观看直播，玩得开心！</div>
-		<div class="text-h3 text-bold">没有语言障碍！</div>
+		<div class="text-h4 q-mb-md">만나고, 채팅하고, 친구를 사귀고,<br>
+라이브 스트림을 시청하고 즐기십시오!</div>
+		<div class="text-h3 text-bold">언어 장벽이 없습니다!</div>
 	</div>
 	<div class="right">
 		<div class="data">
@@ -14,19 +15,19 @@
             filled
             :dense="!$q.screen.gt.md"
             v-model="userRegister.email"
-            label="电子邮件 *"
+            label="이메일 *"
             lazy-rules
             :rules="[
-              val => val && val.length > 0 || '电子邮件',
-              val => email_re.test(String(val)) || '电子邮件'
+              val => val && val.length > 0 || '필수 필드입니다',
+              val => email_re.test(String(val)) || '잘못된 이메일을 입력했습니다'
               ]"/><!--    email      -->
        <q-input
             filled
             :dense="!$q.screen.gt.md"
             v-model="userRegister.wechatid"
-            label="微信ID *"
+            label="이메일 *"
             lazy-rules
-            :rules="[val => val !== null && val !== '' || '微信ID']"
+            :rules="[val => val !== null && val !== '' || '필수 필드입니다']"
           />
        <q-input
             filled
@@ -40,18 +41,18 @@
             filled
             :dense="!$q.screen.gt.md"
             v-model="userRegister.nickname"
-            label="昵称 *"
+            label="전화 번호 *"
             lazy-rules
-            :rules="[val => val !== null && val !== '' || '昵称']"
+            :rules="[val => val !== null && val !== '' || '필수 필드입니다']"
           />
           <q-input
             filled
             :dense="!$q.screen.gt.md"
             :type="isPwd ? 'password' : 'text'"
             v-model="userRegister.password1"
-            label="密码 *"
+            label="이름 *"
             lazy-rules
-            :rules="[val => val !== null && val !== '' || '密码']"
+            :rules="[val => val !== null && val !== '' || '필드입니다']"
           >
             <template v-slot:append>
               <q-icon
@@ -66,10 +67,10 @@
             :dense="!$q.screen.gt.md"
             :type="isPwd ? 'password' : 'text'"
             v-model="userRegister.password2"
-            label="密码重复ь *"
+            label="닉네임 *"
 
             lazy-rules
-            :rules="[val => val !== null && val !== '' || '密码', val => val===userRegister.password1 || '密码重复' ]"
+            :rules="[val => val !== null && val !== '' || '필드입니다', val => val===userRegister.password1 || '비밀번호가 일치하지 않습니다' ]"
           >
             <template v-slot:append>
               <q-icon
@@ -80,14 +81,14 @@
             </template>
           </q-input>
         <div class="q-mb-lg">
-           <p class="q-mb-lg text-caption text-grey-6">访问该网站是付费的！ 注册后，您需要选择合适的资费并支付费用，之后您将可以访问门户并能够与女孩进行交流和会面。</p>
+           <p class="q-mb-lg text-caption text-grey-6">사이트 방문은 유료입니다! 등록 후 적절한 관세를 선택하고 요금을 지불해야 합니다. 그러면 포털에 액세스할 수 있고 소녀들과 소통하고 만날 수 있습니다.</p>
           <q-checkbox dense v-model="agree" >
-            <p class="no-margin text-caption text-grey-6">我同意： <span class="text-info">门户规则、公开报价、用户协议</span></p>
+            <p class="no-margin text-caption text-grey-6">동의합니다:  <span class="text-info">포털 규칙, 공개 제안, 사용자 계약</span></p>
           </q-checkbox>
          </div>
       <div class="flex items-center justify-between q-mt-md">
-         <q-btn  :loading="is_loading" label="创建一个帐户"  no-caps type="submit" rounded color="primary" class="q-px-xl q-py-sm text-bold"/>
-       <p class="no-margin already">已经有账户？ <router-link :to="{name:'signin-page'}">进入站点</router-link> </p>
+         <q-btn unelevated :loading="is_loading" label="계정 만들기"  no-caps type="submit" rounded color="primary" class="q-mb-lg q-px-xl q-py-sm text-bold"/>
+       <p class="no-margin already">이미 계정이 있습니까? <router-link :to="{name:'signin-page'}">사이트를 입력</router-link> </p>
       </div>
 
         </q-form>

@@ -1,34 +1,38 @@
 <template>
 <div class="block blur" @click="openVideo(index)">
 
-					<div class="text-caption text-dark">
-            {{ new Date (video.created_at).toLocaleTimeString().split(':')[0]}}:{{ new Date (video.created_at).toLocaleTimeString().split(':')[1]}},
-            {{ new Date (video.created_at).toLocaleDateString()}}
-          </div>
+
 					<div class="photo">
-						<img style="    width: 180px;    height: 240px;    object-fit: contain; " :src="video.image" alt="photo">
+						<img class="image" :src="video.image" alt="photo">
 <!--						<div class="date">-->
 <!--							<img src="~assets/play.svg" alt="play">-->
 <!--							<div class="num">142</div>-->
 <!--						</div>-->
-						<div class="blur">
-							<div class="text1">通兴VIP</div>
-							<div class="btn">补充</div>
-						</div>
+<!--						<div class="blur">-->
+<!--							<div class="text1">通兴VIP</div>-->
+<!--							<div class="btn">补充</div>-->
+<!--						</div>-->
 					</div>
-					<div class="info">
-						<div class="title">
-							<div class="text-dark text-h6">{{video.title}}</div>
-							<div class="name">{{video.owner.fio}}</div>
-							<div class="name">@{{video.owner.nickname}}</div>
-<!--							<div class="params">-->
-<!--								<img src="~assets/henders.svg" alt="hender">-->
-<!--								<div class="fire"><img src="~assets/fire.svg" alt="fire">51</div>-->
-<!--								<div class="people"><img src="~assets/people.svg" alt="people">17</div>-->
-<!--							</div>-->
-						</div>
-<!--						<div class="data">{{ new Date (video.created_at).toLocaleDateString()}}</div>-->
-					</div>
+
+              <div class="text ">{{video.title}}</div>
+							<div class="info ">{{new Date(video.created_at).toLocaleString()}}</div>
+
+<div class="profile">
+                <q-avatar size="48px" class="q-mr-sm">
+                  <img  :src="video.owner.avatar" alt="avatar">
+                </q-avatar>
+
+                <div class="">
+                  	<div class="name text-dark text-bold ">{{video.owner.fio}}</div>
+					        <div class="username">@{{video.owner.nickname}}</div>
+
+                </div>
+
+
+							</div>
+
+
+
 				</div>
    <q-dialog v-model="videoModal">
       <q-card>
@@ -69,6 +73,33 @@ export default {
   }
 }
 </script>
- <style lang="sass">
-
+ <style lang="sass" scoped>
+.image
+  border-radius: 20px
+  width: 100%
+  height: 340px
+  object-fit: cover
+  display: block
+  margin-bottom: 15px
+.name
+  font-size: 14px
+.username
+  font-size: 12px
+  background: #FFF4F3
+  border-radius: 30px
+  display: inline-block
+  padding: 4px 8px
+  color: #D19F9B
+  font-weight: 300
+.profile
+  display: flex
+  align-items: center
+  justify-content: flex-start
+.text
+  font-size: 14px
+  color: #3E4042
+.info
+  font-size: 12px
+  color: #8B919C
+  margin-bottom: 10px
  </style>

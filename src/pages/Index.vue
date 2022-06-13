@@ -105,7 +105,14 @@
               <img class="fire" src="~assets/fire.svg" alt="fire">
               <div class="text">우리 아가씨들</div>
             </div>
-            <div class="right"><router-link  :to="{name:'girls-page'}">모두보기</router-link> </div>
+            <div class="right">
+              <router-link  :to="{name:'girls-page'}">모두보기</router-link>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.16406 10H15.8307" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 4.16602L15.8333 9.99935L10 15.8327" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+            </div>
           </div>
           <div  class="bottom girls-grid">
             <GirlCardIndex v-for="girl in topStreamers" :key="girl.id" :user="girl"/>
@@ -122,7 +129,13 @@
                   <div class="text">스트리밍 및 방송</div>
                 </div>
 
-                <div class="right"><router-link  :to="{name:'streams-page'}">모두보기</router-link> </div>
+                <div class="right">
+                  <router-link  :to="{name:'streams-page'}">모두보기</router-link>
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.16406 10H15.8307" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 4.16602L15.8333 9.99935L10 15.8327" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div>
               </div>
               <div class="bottom  ">
                 <StreamIndexCard v-for="stream in topStreams" :key="stream.id" :item="stream"/>
@@ -136,73 +149,28 @@
                   <div class="text">최신 여자 반바지</div>
                 </div>
 
-                <div class="right"><router-link  :to="{name:'tiktok-page'}">모두보기</router-link> </div>
+                <div class="right">
+                  <router-link  :to="{name:'tiktok-page'}">모두보기</router-link>
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.16406 10H15.8307" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 4.16602L15.8333 9.99935L10 15.8327" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div>
               </div>
               <div class="bottom tiktok-grid">
 
 
-				<div class="block blur cursor-pointer text-dark" @click="openVideo(index)" v-for="(video,index) in videos" :key="index">
 
-							<div class="text-caption text-dark">{{ new Date (video.created_at).toLocaleDateString()}}</div>
-<!--							<div class="time">5 minutes ago</div>-->
-							<img style="    width: 180px;    height: 240px;    object-fit: contain; " :src="video.image" alt="avatar">
-
-<!--							<div class="params">-->
-<!--								<img src="~assets/henders.svg" alt="hender">-->
-<!--								<div class="fire"><img src="~assets/fire.svg" alt="fire">51</div>-->
-<!--								<div class="people"><img src="~assets/people.svg" alt="people">17</div>-->
-<!--							</div>-->
-          <p class="q-mb-sm text-body2">{{video.title}}</p>
-          <div class="flex items-center">
-             <q-avatar class="q-mr-sm">
-               <img :src="video.owner.avatar" alt="">
-              </q-avatar>
-            <div class="">
-              <p class="no-margin text-bold text-body2">{{video.owner.fio}}</p>
-							<p class="no-margin text-caption">@{{video.owner.nickname}}</p>
-            </div>
-
-          </div>
-
-
-				</div>
-
+<tiktok-card v-for="(video,index) in videos" :video="video" :key="index" />
               </div>
             </div>
-            <div class="photoblock">
-              <div class="top">
-                <div class="left">
-                  <img class="ph" src="~assets/photo.svg" alt="fire">
-                  <div class="text">소녀의 최신 사진 및 사진 앨범</div>
-                </div>
 
-              </div>
-
-              <div class="bottom">
-<!--                v-touch-pan.horizontal.prevent.mouse="handlePan"-->
-                <q-scroll-area ref="scrollAreaRef"  style="height: 270px; max-width: 100%;">
-      <div class="row no-wrap">
-        <GirlPhotosCard @click="cur_gallery=index" v-for="(item,index) in gallery" :key="index" :item="item" :active="cur_gallery===index"/>
-      </div>
-    </q-scroll-area>
-
-
-
-              </div>
-              <div v-if="gallery.length>0" class="bottom2">
-                <div ></div>
-                <div class="photo" v-for="(img,index) in gallery[cur_gallery].images" :key="index">
-                  <img style="width: 100px;height: 100px;object-fit: cover" class="image" :src="img.image" alt="girls">
-                </div>
-
-              </div>
-            </div>
           </div>
           <div class="sidebar ">
             <div class="right favorite-block">
               <div class="flex items-center q-pa-lg">
                 <img class="q-mr-md " src="~assets/rating.svg" alt="fire">
-              <div class="title">논평</div>
+              <div class="title text-bold">논평</div>
               </div>
               <Ratings block-type="index"/>
               <div class="text-center q-pa-md">
@@ -214,6 +182,31 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <div class="photoblock">
+              <div class="top">
+                <div class="left">
+                  <img class="tt" src="~assets/photo.svg" alt="fire">
+                  <div class="text">소녀의 최신 사진 및 사진 앨범</div>
+                </div>
+
+              </div>
+
+              <div class="photoblock-inner">
+<!--                v-touch-pan.horizontal.prevent.mouse="handlePan"-->
+
+      <div class="girls-img-grid">
+        <GirlPhotosCard v-for="(item,index) in gallery" :key="index" :item="item"/>
+      </div>
+
+
+
+
+              </div>
+
+            </div>
+      </div>
+
       <div class="block-six">
         <div class="container">
           <div class="left">
@@ -292,53 +285,95 @@
             <div class="l">
               <div class="data" :class="{'vip':!tariffSwitchStandart}">
                 <div class="one">
-                  <div class="name">
+                  <div class="flex items-center justify-start q-mb-lg">
+                    <svg width="32" height="32" class="q-mr-md" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" rx="16" fill="#F64953"/>
+<path d="M18.083 9.08691V23H15.2266V12.2861C14.875 12.5908 14.3945 12.8662 13.7852 13.1123C13.1758 13.3525 12.6162 13.502 12.1064 13.5605V11.126C13.7119 10.6572 15.1006 9.97754 16.2725 9.08691H18.083Z" fill="white"/>
+</svg>
+<span class="text-bold text-dark text-body1">Select a plan</span>
+                  </div>
+                  <div class="tariff-wrapper q-mb-lg">
+
                     <div class="switch">
                       <!--                      -->
                       <div class="switch-inner " :class="{'active-right':!tariffSwitchStandart}"></div>
-                      <div class="switch-left" @click="tariffSwitchStandart=true"><p class="no-margin text-bold cursor-pointer">단순 관세</p></div>
-                      <div class="switch-right" @click="tariffSwitchStandart=false"><p  class="no-margin text-bold cursor-pointer">VIP 구독</p></div>
+                      <div class="switch-left " @click="tariffSwitchStandart=true, tariff_index=0" :class="{itemActive:tariffSwitchStandart}"><p class="no-margin text-bold cursor-pointer" >단순 관세</p></div>
+                      <div class="switch-right" @click="tariffSwitchStandart=false,tariff_index=0" :class="{itemActive:!tariffSwitchStandart}"><p  class="no-margin text-bold cursor-pointer" >VIP 구독</p></div>
                     </div>
-                  </div>
-                  <div class="select">포함된 기능은 다음과 같습니다：</div>
-                  <div class="params " :class="{active:item.active}" v-for="item in tariffSwitchStandart ? standartTariff.params : vipTariff.params">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect opacity="0.2" x="1" y="1" width="26" height="26" rx="3.42105" stroke="#F64953" stroke-width="2"/>
-                      <g clip-path="url(#clip0)">
-                        <path d="M9.3638 15.2574C9.07605 14.9696 9.07604 14.5031 9.3638 14.2153L9.40247 14.1766C9.69022 13.8889 10.1568 13.8889 10.4445 14.1766L12.6731 16.4052L17.7015 11.3769C17.9892 11.0891 18.4558 11.0891 18.7435 11.3769L18.7924 11.4257C19.0801 11.7134 19.0801 12.1799 18.7925 12.4677L13.2056 18.0569C12.9179 18.3447 12.4512 18.3448 12.1634 18.057L9.3638 15.2574Z" fill="#F64953"/>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0">
-                          <rect width="10.3158" height="10.3158" fill="white" transform="translate(8.8418 8.84229)"/>
-                        </clipPath>
-                      </defs>
-                    </svg>
+                     <div class="params " :class="{active:item.active}" v-for="item in tariffSwitchStandart ? standartTariff.params : vipTariff.params">
+
                     <div class="text">{{item.name}}</div>
-                  </div  >
-                  <q-separator spaced="lg"/>
-                  <div class="flex items-center justify-between">
-                    <q-select label-color="dark" color="primary"
-                              rounded outlined v-model="tariff" :options="tariffSwitchStandart?standartOptions:vipOptions"  >
-                      <template v-slot:option="scope">
-                        <q-item v-bind="scope.itemProps">
-                          <q-item-section>
-                            <q-item-label v-html="scope.opt.label" />
+                       <svg class="tariff-icon" v-if="item.active" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.9987 14.6663C4.3167 14.6663 1.33203 11.6817 1.33203 7.99967C1.33203 4.31767 4.3167 1.33301 7.9987 1.33301C11.6807 1.33301 14.6654 4.31767 14.6654 7.99967C14.6654 11.6817 11.6807 14.6663 7.9987 14.6663ZM7.33403 10.6663L12.0474 5.95234L11.1047 5.00967L7.33403 8.78101L5.44803 6.89501L4.50536 7.83767L7.33403 10.6663Z" />
+</svg>
+                       <svg v-else class="tariff-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.9987 14.6663C4.3167 14.6663 1.33203 11.6817 1.33203 7.99967C1.33203 4.31767 4.3167 1.33301 7.9987 1.33301C11.6807 1.33301 14.6654 4.31767 14.6654 7.99967C14.6654 11.6817 11.6807 14.6663 7.9987 14.6663ZM7.9987 7.05701L6.11336 5.17101L5.17003 6.11434L7.05603 7.99967L5.17003 9.88501L6.11336 10.8283L7.9987 8.94234L9.88403 10.8283L10.8274 9.88501L8.94136 7.99967L10.8274 6.11434L9.88403 5.17101L7.9987 7.05701Z" fill="#A7ACB3"/>
+</svg>
 
-                          </q-item-section>
-                        </q-item>
-                      </template>
-                    </q-select>
-                    <p class="q-mb-none text-bold text-dark text-h5">
-                      <span class="text-body1 text-bold">원화</span>{{tariff.price}}</p>
+
+                  </div  >
+                  </div>
+                         <div class="flex items-center justify-start q-mb-lg">
+<svg width="32" height="32" class="q-mr-md" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" rx="16" fill="#F64953"/>
+<path d="M14.6641 20.6357H20.4385V23H11.3857V21.9893C11.3857 21.2803 11.5146 20.6328 11.7725 20.0469C12.0361 19.4609 12.3965 18.916 12.8535 18.4121C13.3105 17.9023 14.0195 17.3076 14.9805 16.6279C15.8594 15.9717 16.4746 15.3916 16.8262 14.8877C17.1777 14.3779 17.3535 13.8389 17.3535 13.2705C17.3535 12.0459 16.6855 11.4336 15.3496 11.4336C14.1777 11.4336 13.0586 11.9023 11.9922 12.8398V10.3086C13.1816 9.54102 14.5176 9.15723 16 9.15723C17.3594 9.15723 18.4346 9.50586 19.2256 10.2031C20.0166 10.8945 20.4121 11.8496 20.4121 13.0684C20.4121 13.748 20.2979 14.3633 20.0693 14.9141C19.8408 15.459 19.5098 15.9717 19.0762 16.4521C18.6426 16.9326 17.9482 17.5098 16.9932 18.1836C16.0732 18.8398 15.4551 19.3467 15.1387 19.7041C14.8223 20.0615 14.6641 20.3721 14.6641 20.6357Z" fill="white"/>
+</svg>
+
+<span class="text-bold text-dark text-body1">Choose your billing</span>
                   </div>
 
-                  <div class="btn2">계획을 선택</div>
+
+<!--                  <div class="flex items-center justify-between">-->
+<!--                    <q-select label-color="dark" color="primary"-->
+<!--                              rounded outlined v-model="tariff" :options="tariffSwitchStandart?standartOptions:vipOptions"  >-->
+<!--                      <template v-slot:option="scope">-->
+<!--                        <q-item v-bind="scope.itemProps">-->
+<!--                          <q-item-section>-->
+<!--                            <q-item-label v-html="scope.opt.label" />-->
+
+<!--                          </q-item-section>-->
+<!--                        </q-item>-->
+<!--                      </template>-->
+<!--                    </q-select>-->
+<!--                    <p class="q-mb-none text-bold text-dark text-h5">-->
+<!--                      <span class="text-body1 text-bold">원화</span>{{tariff.price}}</p>-->
+<!--                  </div>-->
+                    <div class="q-mb-xl">
+                        <div class="tariff-payment "
+                       v-for="(item,index) in tariffSwitchStandart?standartOptions:vipOptions"
+                       :class="{isSelected:tariff_index===index}"
+                       @click="tariff_index=index"
+                  >
+
+
+                    <div class="">
+                      <svg v-if="tariff_index===index" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z" fill="white"/>
+</svg>
+
+
+<svg width="24" v-else height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="9.25" stroke="#A7ACB3" stroke-width="1.5"/>
+</svg>
+                    </div>
+                    <div class="">
+                      <p class="text-bold no-margin">{{item.label}}</p>
+                      <div class="tariff-subtitle">{{item.text}}</div>
+                    </div>
+                    <p class="text-bold no-margin">{{item.price}}</p>
+
+
+                  </div>
+                    </div>
+
+
+                  <div class="btn2 ">계획을 선택</div>
                 </div>
               </div>
 
             </div>
             <div class="tariff-info">
-              <p class="text-dark text-h6">지불 규칙</p>
+              <p class="text-dark text-h6 text-bold">지불 규칙</p>
               <p>구독 결제 단계:</p>
                 <p>1. 웹사이트에서 회원가입</p>
                 <p>2. 사이트 입력</p>
@@ -346,8 +381,8 @@
                 <p>4. 당사 플랫폼 사용</p>
               <p class="text-body2">사용자가 만료된 후 구독 갱신 기간을 결정합니다! 모든 구독은 수동으로 갱신되며 자동 구독은 없습니다.
 구독이 만료되면 모든 데이터가 저장되며 갱신 후 플랫폼을 다시 사용할 수 있습니다.</p>
-              <q-separator spaced="lg"/>
-              <p class="text-dark text-h6">우리는 지불을 지원합니다</p>
+
+              <p class="text-dark text-h6 text-bold">우리는 지불을 지원합니다</p>
               <div class="flex justify-between q-mb-md">
                 <img src="~assets/p1.png" alt="">
                 <img src="~assets/p2.png" alt="">
@@ -456,7 +491,7 @@ import {mapGetters} from 'vuex'
 // Import Swiper styles
 import 'swiper/swiper.scss';
 import StreamIndexCard from "components/cards/StreamIndexCard";
-import TiktokCardIndex from "components/cards/TiktokCardIndex";
+import TiktokCard from "components/cards/TickTokCard";
 import GirlPhotosCard from "components/cards/GirlPhotosCard";
 import PaymentBlock from "components/PaymentBlockIndex";
 import Ratings from "components/Ratings";
@@ -465,7 +500,7 @@ export default {
   components: {
     GirlCardIndexIndex,
     GirlPhotosCard,
-    TiktokCardIndex,
+    TiktokCard,
     StreamIndexCard, GirlCardIndex,
     PaymentBlock,
     Ratings,
@@ -480,16 +515,17 @@ export default {
       cur_gallery:0,
       payModalActive:false,
       tariffSwitchStandart:true,
+      tariff_index:0,
       tariff:{label:'3', price: '67,700.00'},
       standartOptions:[
-        {label:'3',price:'67,700.00'},
-        {label:'6',price:'118,800.00'},
-        {label:'12',price:'207,800.00'},
+        {label:'3',price:'67,700.00',text:'lorem'},
+        {label:'6',price:'118,800.00',text:'lorem'},
+        {label:'12',price:'207,800.00',text:'lorem'},
       ],
       vipOptions:[
-        {label:'3',price:'315,500.00'},
-        {label:'6',price:'815,800.00'},
-        {label:'12',price:'1,355,500.00'},
+        {label:'3',price:'315,500.00',text:'lorem'},
+        {label:'6',price:'815,800.00',text:'lorem'},
+        {label:'12',price:'1,355,500.00',text:'lorem'},
       ],
       standartTariff:{
         params:[
@@ -590,6 +626,47 @@ export default {
 }
 </script>
 <style lang="sass">
+.tariff-icon
+  fill : #F64953
+.tariff-payment
+  cursor: pointer
+  border-radius: 20px
+  padding: 14px 28px
+  display: grid
+  grid-template-columns: 2fr 5fr 2fr
+  align-items: center
+  color: #182430
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04)
+  margin-bottom: 15px
+  &:last-child
+    margin-bottom: 0px
+  &.isSelected
+    background: #4D94FF
+    color: #FFFFFF
+    & .tariff-subtitle
+      background: rgba(255, 255, 255, 0.2)
+      color: #FFFFFF
+
+.tariff-subtitle
+  background: rgba(246, 73, 83, 0.1)
+  color: #F64953
+  border-radius: 55px
+  padding: 6px 10px
+  font-size: 12px
+  display: inline-block
+.tariff-wrapper
+  background: #F4F5F8
+  border-radius: 20px
+  padding: 30px 25px
+.photoblock
+
+  background: #FFFFFF
+  margin-top: 28px
+  box-shadow: 0px 5.30815px 72.987px rgb(0 0 0 / 5%)
+  border-radius: 24px
+  &-inner
+    padding: 28px
+
 .features
   display: grid
   grid-template-columns: repeat(auto-fit,minmax(220px, 1fr))

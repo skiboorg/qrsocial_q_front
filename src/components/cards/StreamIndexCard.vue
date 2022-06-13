@@ -1,23 +1,20 @@
 <template>
-  	<div class="user ">
-							<div class="time">
-								<div class="hours">{{ new Date (item.date).toLocaleDateString()}}</div>
-<!--								<div class="date">24.05</div>-->
-							</div>
-							<img style="max-width: 100%;height: auto" class="girls" :src="item.image" alt="avatar">
-							<div class="text">{{item.name}}</div>
+  	<div class=" ">
+<!--							<div class="time">-->
+<!--								<div class="hours">{{ new Date (item.date).toLocaleDateString()}}</div>-->
+<!--&lt;!&ndash;								<div class="date">24.05</div>&ndash;&gt;-->
+<!--							</div>-->
+							<img class="image" :src="item.image" alt="avatar">
+							<div class="text ">{{item.name}}</div>
+							<div class="info ">{{new Date(item.start).toLocaleString()}}</div>
 							<div class="profile">
-                <q-avatar size="30px">
+                <q-avatar size="48px" class="q-mr-sm">
                   <img  :src="item.streamer.avatar" alt="avatar">
                 </q-avatar>
 
 								<div>
-									<div class="params">
-										<img src="~assets/henders.svg" alt="hender">
-										<div class="fire"><img src="~assets/fire.svg" alt="fire">{{item.streamer.streamer_rating}}</div>
-										<div class="people"><img src="~assets/people.svg" alt="people">17</div>
-									</div>
-									<div class="name">{{item.streamer.nickname}}</div>
+									<div class="name text-dark text-bold ">{{item.streamer.fio}}</div>
+					        <div class="username">@{{item.streamer.nickname}}</div>
 								</div>
 							</div>
 						</div>
@@ -35,6 +32,27 @@ export default {
   }
 }
 </script>
- <style lang="sass">
-
+ <style lang="sass" scoped>
+.name
+  font-size: 14px
+.username
+  font-size: 12px
+.profile
+  display: flex
+  align-items: center
+  justify-content: flex-start
+.text
+  font-size: 14px
+  color: #3E4042
+.info
+  font-size: 12px
+  color: #8B919C
+  margin-bottom: 10px
+.image
+  width: 240px
+  height: 140px
+  object-fit: cover
+  border-radius: 20px
+  display: block
+  margin-bottom: 15px
  </style>

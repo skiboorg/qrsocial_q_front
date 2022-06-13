@@ -1,24 +1,20 @@
 <template>
 
- <div class=" ">
-							<div class="profile">
+ <div class="cursor-pointer ">
+
+
+								<img  class="image" draggable="false"  :src="item.image" alt="avatar">
+
+   				<div class="profile">
                 <q-avatar class="q-mr-sm">
                  <img  :src="item.owner.avatar" alt="avatar">
                 </q-avatar>
 
 								<div>
-<!--									<div class="params">-->
-<!--										<img src="~assets/henders.svg" alt="hender">-->
-<!--										<div class="fire"><img src="~assets/fire.svg" alt="fire">51</div>-->
-<!--										<div class="people"><img src="~assets/people.svg" alt="people">17</div>-->
-<!--									</div>-->
-									<p class="no-margin text-dark text-bold text-body2">{{item.owner.fio}}</p>
-									<p class="no-margin text-dark text-caption">@{{item.owner.nickname}}</p>
+
+									<p class="no-margin name text-dark text-bold">{{item.owner.fio}}</p>
+									<p class="no-margin username">@{{item.owner.nickname}}</p>
 								</div>
-							</div>
-							<div class="photoblock cursor-pointer">
-<!--								<div class="addphoto">+4 new photos</div>-->
-								<img  style="z-index: -1; width: 240px; height: 180px;object-fit: cover" class="newphoto image" draggable="false" :class="{active:active}" :src="item.image" alt="avatar">
 							</div>
 						</div>
 </template>
@@ -27,7 +23,7 @@
 
 
 export default {
-  props:['item','active'],
+  props:['item'],
   data () {
     return {
 
@@ -35,6 +31,34 @@ export default {
   }
 }
 </script>
- <style lang="sass">
+ <style lang="sass" scoped>
+.image
+  border-radius: 20px
+  width: 250px
+  height: 240px
+  object-fit: cover
+  display: block
+  margin-bottom: 15px
+.name
+  font-size: 14px
+.username
+  font-size: 12px
+  background: #FFF4F3
+  border-radius: 30px
+  display: inline-block
+  padding: 4px 8px
+  color: #D19F9B
+  font-weight: 300
+.profile
+  display: flex
+  align-items: center
+  justify-content: flex-start
+.text
+  font-size: 14px
+  color: #3E4042
+.info
+  font-size: 12px
+  color: #8B919C
+  margin-bottom: 10px
 
  </style>
