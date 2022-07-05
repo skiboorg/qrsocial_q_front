@@ -98,6 +98,21 @@ watch live streams and have fun!
 		</div>
 	</div>
 </div>
+    <q-dialog v-model="show">
+      <q-card>
+        <q-card-section>
+          <div class="text-h6 text-dark">Спасибо за регистрацию!</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none text-dark">
+           Ваш профиль будет активирован в течении 24 часов. После активации профиля мы с вами свяжемся через указанную вами почту или в whatsapp.
+
+        </q-card-section>
+       <q-card-actions align="right">
+          <q-btn flat label="OK" color="primary" @click="$router.push('/')" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -110,6 +125,7 @@ export default {
     return {
        email_re:/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
         is_loading:false,
+      show:false,
         isPwd:true,
         agree:false,
       userRegister:{
@@ -119,6 +135,7 @@ export default {
         wechatid:null,
         password1:null,
         password2:null,
+        is_streamer:true,
       },
 
     }
@@ -141,6 +158,7 @@ export default {
           icon: 'announcement'
         })
         this.is_loading=false
+        this.show=true
       }catch (e) {
         this.$q.notify({
           message: 'Проверьте введеные данные',

@@ -1,10 +1,10 @@
 <template>
   <div class="payment-block text-dark">
     <p v-if="blockType==='index'" class="text-h6">在我们的网站上支付您的会员费以开始使用我们的平台！<br> 选择关税和付款方式。</p>
-    <p>付款方式</p>
+    <p>지불 방법</p>
       <div class="payment-grid q-mb-md">
         <q-card @click="selectedPaymentType=index" class="payment-card" :class="{active:selectedPaymentType===index}" v-for="(type,index) in paymentTypes" :key="index">
-          <img draggable="false" style="width: 120px;height: 54px;object-fit: contain" :src="type.img" alt="">
+          <img draggable="false" style="width: 120px;height: 80px;object-fit: contain" :src="type.img" alt="">
 <!--          <p class="no-margin">{{type.name}}</p>-->
         </q-card>
       </div>
@@ -14,22 +14,22 @@
           <p class="no-margin">{{type.name}}</p>
         </q-card>
       </div>
-    <p v-if="blockType==='lk'">补货方法</p>
+    <p v-if="blockType==='lk'">보충 방법</p>
       <div v-if="blockType==='lk'" class="payment-grid q-mb-md">
         <q-card @click="selectedPaymentAmount=index" class="payment-card" :class="{active:selectedPaymentAmount===index}" v-for="(type,index) in paymentAmounts" :key="index">
           <p class="no-margin flex items-center"><img src="~assets/diamond.svg" alt="">{{type.coins}}</p>
-          <p class="no-margin flex items-end text-grey-7 text-bold"><span class="text-caption inline-block q-mr-xs">Y</span> {{type.price}}</p>
+          <p class="no-margin flex items-end text-grey-7 text-bold"><span class="text-caption inline-block q-mr-xs">₩</span> {{type.price}}</p>
         </q-card>
       </div>
     <p v-if="blockType==='index'">账户到期日</p>
       <div v-if="blockType==='index'" class="payment-grid q-mb-md">
         <q-card @click="selectedMonth=index" class="payment-card" :class="{active:selectedMonth===index}" v-for="(type,index) in paymentMonths" :key="index">
           <p class="no-margin flex items-center">{{type.months}}</p>
-          <p class="no-margin flex items-end text-grey-7 text-bold"><span class="text-caption inline-block q-mr-xs">Y</span> {{type.price}}</p>
+          <p class="no-margin flex items-end text-grey-7 text-bold"><span class="text-caption inline-block q-mr-xs">₩ </span> {{type.price}}</p>
         </q-card>
       </div>
   <div class="text-center">
-    <q-btn label="充值" rounded  class="q-px-xl q-py-sm text-bold" color="primary"/>
+    <q-btn label="재충전" rounded unelevated @click="add"  class="q-px-xl q-py-sm text-bold" color="primary"/>
   </div>
   </div>
 
@@ -49,18 +49,21 @@ export default {
       selectedPaymentAccountType:0,
       selectedMonth:0,
       paymentTypes:[
-        {name:'Alipay',img:'a-pay.svg'},
-        {name:'WeChat pay',img:'w-pay.svg'}
+        {name:'Visa',img:'p1.png'},
+        {name:'MC',img:'p2.png'},
+        {name:'Npay',img:'p3.png'},
+        {name:'kakao',img:'p4.png'},
+
       ],
       paymentAccountTypes:[
         {name:'会员资格'},
         {name:'贵宾会员VIP'}
       ],
       paymentAmounts:[
-        {coins:'150',price:100},
-        {coins:'300',price:180},
-        {coins:'750',price:450},
-        {coins:'1500',price:700},
+        {coins:'150',price:19800},
+        {coins:'300',price:34600},
+        {coins:'750',price:88800},
+        {coins:'1500',price:140400},
       ],
       paymentMonths:[
         {months:'1个月',price:1},
@@ -73,7 +76,12 @@ export default {
     }
   },
   methods:{
+    ...mapActions('auth',['getUser']),
+    async add(){
+      await this.$api.post('/api/v1/user/add_to_balance',{amount:this.paymentAmounts[this.selectedPaymentAmount].price})
+      await this.getUser(false)
 
+    }
   },
 
 }

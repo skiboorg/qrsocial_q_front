@@ -43,11 +43,12 @@
 			</div>
 			<div class="sidebar-bottom_two">
 				<div class="title">
-					<div>균형 :</div>
+					<div style="background: #F3F5FF;
+border-radius: 55px;padding: 5px 15px;color: #4D94FF">균형 :</div>
 					<div class="balance"><img src="~assets/diamond.svg" alt="diamond">{{$auth.user.balance}}</div>
 				</div>
 <!--        <p class="text-dark no-margin text-caption">账户到期日:<br> 1234-34-34</p>-->
-				<q-btn rounded :to="{name:'user-profile-balance'}" class="full-width btn">充值</q-btn>
+				<q-btn rounded unelevated :to="{name:'user-profile-balance'}" class="full-width btn">补充</q-btn>
 			</div>
 		</div>
 </template>

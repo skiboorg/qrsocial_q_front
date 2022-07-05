@@ -1,6 +1,15 @@
 <template>
-  <div class="blogpost">
-		<BlogCard v-for="post in posts" :key="post.id" :post="post"/>
+
+  <div class="catalog">
+    <div class="top">
+      <img class="fire " src="~assets/pin.svg" alt="fire">
+      <div class="text">블로그 및 포털 뉴스</div>
+    </div>
+    <div class="blogpost">
+      <BlogCard v-for="post in posts" :key="post.id" :post="post"/>
+    </div>
+
+
 
 		</div>
 </template>

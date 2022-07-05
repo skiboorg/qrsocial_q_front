@@ -829,6 +829,7 @@ div {
 }
 
 .index .block-four .container .top .right,
+.index .block-six .container .top .right,
 .index .block-five .container .top .right {
   display: flex;
   align-items: center;
@@ -1679,7 +1680,7 @@ div {
 .main .container .left-sidebar .sidebar-bottom .sidebar-nav {
   display: flex;
   align-items: center;
-  padding: 12px 66px 12px 24px;
+  padding: 12px 42px 12px 24px;
 }
 
 
@@ -1993,7 +1994,7 @@ div {
   padding: 12px 0;
   background: #F7F7F7;
   border-radius: 55px;
-  margin-top: 24px;
+  margin-top: 10px;
 }
 
 .wall-avatar .key {
@@ -4062,12 +4063,23 @@ div {
   width: 100%;
 }
 
-.catalog .h1 {
-  font-weight: 500;
-  font-size: 14px;
+.catalog .top  .text{
+  font-weight: 700;
+  font-size: 18px;
   line-height: 130%;
   color: #3E4042;
-  padding: 28px;
+  letter-spacing: 0.04em;
+}
+.catalog .top  .fire{
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0px 4px 25px rgba(254, 113, 124, 0.55));
+  margin-right: 18px;
+}
+.catalog .top {
+  padding: 28px 28px 20px;
+  display: flex;
+  align-items: center;
 }
 
 .catalog .grid {
@@ -4076,7 +4088,7 @@ div {
   grid-row-gap: 28px;
   grid-column-gap: 24px;
   padding: 28px;
-  border-top: 2px solid #E2E2E2;
+
 }
 
 .catalog .grid .block .photo {

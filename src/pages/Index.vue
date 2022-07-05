@@ -217,14 +217,20 @@
 
                 </div>
 
-              <div class="r"><router-link  :to="{name:'blogs-page'}">모두보기</router-link></div>
 
+              <div class="right">
+                <router-link  :to="{name:'blogs-page'}">모두보기</router-link>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.16406 10H15.8307" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 4.16602L15.8333 9.99935L10 15.8327" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
             </div>
             <div class="content">
               <div class="l" v-for="post in posts" :key="post.id">
                 <router-link :to="`/blogs/${post.name_slug}`">
                   <img class="image" style=" height: 200px; object-fit: cover" :src="post.image" alt="picture">
-                  <div class="text-h6 text-dark">{{post.short_description}}</div>
+                  <div class="text-body1 text-dark">{{post.short_description}}</div>
                 </router-link>
               </div>
             </div>
@@ -290,7 +296,7 @@
 <rect width="32" height="32" rx="16" fill="#F64953"/>
 <path d="M18.083 9.08691V23H15.2266V12.2861C14.875 12.5908 14.3945 12.8662 13.7852 13.1123C13.1758 13.3525 12.6162 13.502 12.1064 13.5605V11.126C13.7119 10.6572 15.1006 9.97754 16.2725 9.08691H18.083Z" fill="white"/>
 </svg>
-<span class="text-bold text-dark text-body1">Select a plan</span>
+<span class="text-bold text-dark text-body1">계획을 선택</span>
                   </div>
                   <div class="tariff-wrapper q-mb-lg">
 
@@ -319,7 +325,7 @@
 <path d="M14.6641 20.6357H20.4385V23H11.3857V21.9893C11.3857 21.2803 11.5146 20.6328 11.7725 20.0469C12.0361 19.4609 12.3965 18.916 12.8535 18.4121C13.3105 17.9023 14.0195 17.3076 14.9805 16.6279C15.8594 15.9717 16.4746 15.3916 16.8262 14.8877C17.1777 14.3779 17.3535 13.8389 17.3535 13.2705C17.3535 12.0459 16.6855 11.4336 15.3496 11.4336C14.1777 11.4336 13.0586 11.9023 11.9922 12.8398V10.3086C13.1816 9.54102 14.5176 9.15723 16 9.15723C17.3594 9.15723 18.4346 9.50586 19.2256 10.2031C20.0166 10.8945 20.4121 11.8496 20.4121 13.0684C20.4121 13.748 20.2979 14.3633 20.0693 14.9141C19.8408 15.459 19.5098 15.9717 19.0762 16.4521C18.6426 16.9326 17.9482 17.5098 16.9932 18.1836C16.0732 18.8398 15.4551 19.3467 15.1387 19.7041C14.8223 20.0615 14.6641 20.3721 14.6641 20.6357Z" fill="white"/>
 </svg>
 
-<span class="text-bold text-dark text-body1">Choose your billing</span>
+<span class="text-bold text-dark text-body1">결제 방법을 선택</span>
                   </div>
 
 
@@ -518,14 +524,14 @@ export default {
       tariff_index:0,
       tariff:{label:'3', price: '67,700.00'},
       standartOptions:[
-        {label:'3',price:'67,700.00',text:'lorem'},
-        {label:'6',price:'118,800.00',text:'lorem'},
-        {label:'12',price:'207,800.00',text:'lorem'},
+        {label:'3 개월',price:'67,700.00',text:'표준 요금'},
+        {label:'6 개월',price:'118,800.00',text:'10% 절약'},
+        {label:'12 개월',price:'207,800.00',text:'25% 절약'},
       ],
       vipOptions:[
-        {label:'3',price:'315,500.00',text:'lorem'},
-        {label:'6',price:'815,800.00',text:'lorem'},
-        {label:'12',price:'1,355,500.00',text:'lorem'},
+        {label:'3 개월',price:'315,500.00',text:'표준 요금'},
+        {label:'6 개월',price:'815,800.00',text:'10% 절약'},
+        {label:'12 개월',price:'1,355,500.00',text:'25% 절약'},
       ],
       standartTariff:{
         params:[

@@ -2,10 +2,10 @@
  <div class="documents">
 			<div class="navbar">
 				<div class="nav cursor-pointer" @click="$router.push('/rules')">平台规则</div>
-        <div class="nav active " >更新历史</div>
-				<div class="nav cursor-pointer" @click="$router.push('/instrustions')">指南</div>
-         <div class="nav cursor-pointer" @click="$router.push('/guidevip')">贵宾福利</div>
-				<div class="nav cursor-pointer" @click="$router.push('/contacts')">联系人</div>
+        <div class="nav active " >업데이트 기록</div>
+				<div class="nav cursor-pointer" @click="$router.push('/instrustions')">가이드</div>
+         <div class="nav cursor-pointer" @click="$router.push('/guidevip')">VIP 혜택</div>
+				<div class="nav cursor-pointer" @click="$router.push('/contacts')">연락하다</div>
 			</div>
 			<div class="contents">
 				<div style="position: sticky;top: 20px" class="left backblock">

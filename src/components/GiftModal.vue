@@ -2,10 +2,10 @@
   <q-dialog v-model="giftModalActive">
     <q-card class="cursor-pointer" style="border-radius: 24px;width: 800px; max-width: 80vw;">
       <q-card-section class="row items-center q-pb-none text-dark">
-        <div class="text-h6">女孩目录</div>
+        <div class="text-h6">여자 디렉토리</div>
         <q-space />
         <q-btn icon="close" flat round dense v-close-popup />
-        <p class="text-body2 text-grey-6 q-my-sm">送女孩礼物，你关注她，写下你的留言或愿望！ 她一定会回答你的礼物。 如果您提出礼物请求，女孩会在聊天中向您发送回复。您将在礼物版块的个人账户中看到礼物的答案。</p>
+        <p class="text-body2 text-grey-6 q-my-sm">소녀에게 선물을 주고, 그녀를 팔로우하고, 메시지나 소원을 적어보세요! 그녀는 확실히 당신의 선물에 답할 것입니다. 선물 신청을 하시면 채팅으로 소녀가 답장을 보내드립니다. 선물 섹션의 개인 계정에서 선물에 대한 답변을 볼 수 있습니다.</p>
       </q-card-section>
       <q-separator spaced="md"/>
       <div class="q-mx-md">
@@ -76,15 +76,16 @@
                    rounded
                    bg-color="grey-2"
                    @keydown="keyDown"
-                   label="输入您对女孩的要求或愿望"
+                   label="당신의 요청이나 소녀에 대한 소원을 입력"
                    label-color="grey-6"
                    dark
                    class="text-dark q-mr-md"
                    v-model="message"/>
           <q-btn :disable="!cur_gift"
                  @click="sendGift"
-                 label="送礼物"
+                 label="선물을 보내다"
                  class="q-px-xs q-py-md"
+                 unelevated
                  style="width: 142px"
                  rounded
                  color="primary"/>

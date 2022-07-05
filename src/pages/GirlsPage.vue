@@ -1,6 +1,9 @@
 <template>
 <div class="catalog catalogstream backblock">
-			<div class="h1">我们的辣妹</div>
+  <div class="top">
+    <img class="fire" src="~assets/fire.svg" alt="fire">
+    <div class="text">우리 아가씨들</div>
+  </div>
 			<div class="grid">
         <GirlCard v-for="girl in girls" :key="girl.id" :girl="girl"/>
 			</div>

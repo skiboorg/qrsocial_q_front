@@ -1,9 +1,12 @@
 <template>
 <div class="catalog catalogstream backblock">
-			<div class="h1">女孩目录</div>
+  <div class="top">
+    <img class="fire" src="~assets/tv.svg" alt="tv">
+    <div class="text">스트리밍 및 방송</div>
+  </div>
 			<div class="grid">
 
-				<StreamCard v-for="stream in streams" :key="stream.id" :stream="stream"/>
+				<StreamCard v-for="stream in streams" :key="stream.id" :item="stream"/>
 
 			</div>
 		</div>
@@ -12,10 +15,10 @@
 <script>
 
 
-import TickTokCard from "components/cards/TickTokCard";
-import StreamCard from "components/cards/StreamCard";
+
+import StreamCard from "components/cards/StreamIndexCard";
 export default {
-  components: {StreamCard, TickTokCard},
+  components: {StreamCard},
   data () {
     return {
       streams:[]

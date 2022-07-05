@@ -1,6 +1,9 @@
 <template>
 <div class="catalog catalogstream catalogtt backblock">
-			<div class="h1">女孩目录</div>
+  <div class="top">
+    <img class="fire" src="~assets/tiktok.svg" alt="tv">
+    <div class="text">최신 여자 반바지</div>
+  </div>
 			<div class="grid">
 				<TickTokCard v-for="(video,index) in videos" :key="video.id" :video="video" :index="index"/>
 
