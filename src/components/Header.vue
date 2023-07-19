@@ -29,7 +29,7 @@
               link.need_auth ?
                     $auth.loggedIn && $auth.user.is_verified ? '' : 'show'
                    : '']">
-              <p class="no-margin text-center q-py-sm q-px-md">사용하려면 로그인</p>
+              <p class="no-margin text-center q-py-sm q-px-md">Login to use</p>
             </div>
 
           </div>
@@ -39,8 +39,8 @@
       </div>
       <div class="broadcasting">{{$route.meta.title}}</div>
       <div class="header-right_unlogged">
-        <div @click="$router.push('/signup')" class="balance">충전 잔액</div>
-        <div @click="$router.push('/signin')" class="register">로그인</div>
+        <div @click="$router.push('/signup')" class="balance">Balance</div>
+        <div @click="$router.push('/signin')" class="register">Login</div>
       </div>
 <!--      <div class="perfomance">表演</div>-->
 
@@ -121,12 +121,12 @@ export default {
       is_index:true,
       header_title:'',
       menu_links:[
-        {name:'가족',url:'index-page',need_auth:false},
-        {name:'동영상',url:'tiktok-page',need_auth:true},
-        {name:'우리 소녀',url:'girls-page',need_auth:true},
-        {name:'규칙',url:'faq-rules',need_auth:true},
-        {name:'연락하다',url:'faq-contact',need_auth:true},
-        {name:'가이드',url:'faq-docs',need_auth:true},
+        {name:'Home',url:'index-page',need_auth:false},
+        {name:'Video',url:'tiktok-page',need_auth:true},
+        {name:'Girls',url:'girls-page',need_auth:true},
+        {name:'Rules',url:'faq-rules',need_auth:true},
+        {name:'Contacts',url:'faq-contact',need_auth:true},
+        {name:'Docs',url:'faq-docs',need_auth:true},
 
       ],
       header_titles:[

@@ -5,9 +5,9 @@
       <div class="block-one">
         <div class="container">
           <div class="title">
-            <div class="h1">러시아의 아름다운 소녀들이 우리 사이트에서 만나고 소통합니다!</div>
-            <div class="h2">선물을 주고, 소녀들을 레벨업하고, 만나고 관계를 시작하세요!
-우리의 플랫폼은 사람들을 하나로 모읍니다</div>
+            <div class="h1">Beautiful girls from Russia meet and communicate on our site!</div>
+            <div class="h2">Give gifts, level up girls, meet and start relationships!
+              Our platform brings people together</div>
           </div>
         </div>
 
@@ -103,10 +103,10 @@
           <div class="top">
             <div class="left">
               <img class="fire" src="~assets/fire.svg" alt="fire">
-              <div class="text">우리 아가씨들</div>
+              <div class="text text-uppercase">our girls</div>
             </div>
             <div class="right">
-              <router-link  :to="{name:'girls-page'}">모두보기</router-link>
+              <router-link  :to="{name:'girls-page'}">View all</router-link>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4.16406 10H15.8307" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10 4.16602L15.8333 9.99935L10 15.8327" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -126,11 +126,11 @@
               <div class="top">
                 <div class="left">
                   <img class="icon" src="~assets/tv.svg" alt="tv">
-                  <div class="text">스트리밍 및 방송</div>
+                  <div class="text">Streaming and Broadcasting</div>
                 </div>
 
                 <div class="right">
-                  <router-link  :to="{name:'streams-page'}">모두보기</router-link>
+                  <router-link  :to="{name:'streams-page'}">View all</router-link>
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4.16406 10H15.8307" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10 4.16602L15.8333 9.99935L10 15.8327" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -146,11 +146,11 @@
               <div class="top">
                 <div class="left">
                   <img class="tt" src="~assets/tiktok.svg" alt="tv">
-                  <div class="text">최신 여자 반바지</div>
+                  <div class="text">Latest girls shorts</div>
                 </div>
 
                 <div class="right">
-                  <router-link  :to="{name:'tiktok-page'}">모두보기</router-link>
+                  <router-link  :to="{name:'tiktok-page'}">View all</router-link>
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4.16406 10H15.8307" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10 4.16602L15.8333 9.99935L10 15.8327" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -174,7 +174,7 @@
               </div>
               <Ratings block-type="index"/>
               <div class="text-center q-pa-md">
-                 <q-btn @click="$router.push({name:'rating-page'})" unelevated label="모두보기" rounded class="btn full-width text-body1" color="primary"/>
+                 <q-btn @click="$router.push({name:'rating-page'})" unelevated label="View all" rounded class="btn full-width text-body1" color="primary"/>
               </div>
 
             </div>
@@ -187,7 +187,7 @@
               <div class="top">
                 <div class="left">
                   <img class="tt" src="~assets/photo.svg" alt="fire">
-                  <div class="text">소녀의 최신 사진 및 사진 앨범</div>
+                  <div class="text">Latest photos and photo albums of girls</div>
                 </div>
 
               </div>
@@ -213,13 +213,13 @@
             <div class="top">
                 <div class="flex items-center">
                    <img class="ph q-mr-md " src="~assets/pin.svg" alt="fire">
-                  <div class="l">블로그 및 포털 뉴스</div>
+                  <div class="l">Blog and portal news</div>
 
                 </div>
 
 
               <div class="right">
-                <router-link  :to="{name:'blogs-page'}">모두보기</router-link>
+                <router-link  :to="{name:'blogs-page'}">View all</router-link>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.16406 10H15.8307" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M10 4.16602L15.8333 9.99935L10 15.8327" stroke="#4D94FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -239,40 +239,40 @@
             <div class="top">
               <div class="flex items-center">
                   <img class="ph q-mr-md " src="~assets/info.svg" alt="fire">
-                  <div class="l">자주하는 질문</div>
+                  <div class="l">Frequently Asked Questions</div>
                 </div>
             </div>
             <div class="content">
               <q-list class="text-dark">
                 <q-expansion-item
                   group="somegroup"
-                  label="1. 플랫폼에 액세스하는 데 요금이 있습니까？"
+                  label="1. Is there a fee to access the platform？"
 
                   default-opened>
                   <q-card>
                     <q-card-section>
-                     - 예, 우리가 소녀들에게 받는 기금을 제공할 때 액세스 권한이 지급됩니다. 웹사이트에서 등록한 후 구독을 선택하고 지불할 수 있습니다.
+                     - Yes, access is paid when we give girls the funds they receive. After registering on the website, you can select and pay for your subscription.
                     </q-card-section>
                   </q-card>
                 </q-expansion-item>
-                <q-expansion-item group="somegroup" label="2. 소녀들은 얼마나 자주 포스팅을 하나요?">
+                <q-expansion-item group="somegroup" label="2. How often do girls post?">
                   <q-card>
                     <q-card-section>
-                      - 모든 소녀에게는 자신만의 스트리밍 및 출판 일정이 있으며, 이는 그녀가 직장이나 학교에서 무엇을 하는지에 달려 있습니다. 이 정보는 소녀들의 개인 메시지에서 찾을 수 있습니다.
+                      - Every girl has her own streaming and publishing schedule, which depends on what she does at work or school. This information can be found in the girls' private messages.
                     </q-card-section>
                   </q-card>
                 </q-expansion-item>
-                <q-expansion-item group="somegroup" label="3. 언어 장벽을 어떻게 처리합니까?">
+                <q-expansion-item group="somegroup" label="3. How do you deal with the language barrier?">
                   <q-card>
                     <q-card-section>
-                      - 소녀들과의 온라인 채팅에서 자동 번역기: 모든 메시지는 모국어로, 소녀는 러시아어로 되어 있음을 알 수 있습니다. 우리 동시통역기는 중국어 번역 텍스트가 표시되는 방송에서 작동합니다.
+                      - Automatic translator in online chats with girls: you can see that all messages are in your native language, and the girls are in Russian. Our simultaneous interpreter works on air where the Chinese translation text is displayed.
                     </q-card-section>
                   </q-card>
                 </q-expansion-item>
-                <q-expansion-item group="somegroup" label="4. 귀하의 플랫폼은 어떤 기능을 제공합니까?">
+                <q-expansion-item group="somegroup" label="4. What features does your platform offer?">
                   <q-card>
                     <q-card-section>
-                      - 플랫폼 및 가이드의 전체 기능은 여기에서 읽을 수 있습니다.
+                      - Full features of the platform and guide can be read here.
                     </q-card-section>
                   </q-card>
                 </q-expansion-item>
@@ -285,8 +285,8 @@
       </div>
       <div class="block-seven">
         <div class="container">
-          <div class="h1">오늘부터</div>
-          <div class="h2">올바른 계획을 선택하고 소녀들과 채팅을 시작하세요</div>
+          <div class="h1">From today</div>
+          <div class="h2">Choose the right plan and start chatting with girls</div>
           <div class="content">
             <div class="l">
               <div class="data" :class="{'vip':!tariffSwitchStandart}">
@@ -296,7 +296,7 @@
 <rect width="32" height="32" rx="16" fill="#F64953"/>
 <path d="M18.083 9.08691V23H15.2266V12.2861C14.875 12.5908 14.3945 12.8662 13.7852 13.1123C13.1758 13.3525 12.6162 13.502 12.1064 13.5605V11.126C13.7119 10.6572 15.1006 9.97754 16.2725 9.08691H18.083Z" fill="white"/>
 </svg>
-<span class="text-bold text-dark text-body1">계획을 선택</span>
+<span class="text-bold text-dark text-body1">Choose a plan</span>
                   </div>
                   <div class="tariff-wrapper q-mb-lg">
 
@@ -325,7 +325,7 @@
 <path d="M14.6641 20.6357H20.4385V23H11.3857V21.9893C11.3857 21.2803 11.5146 20.6328 11.7725 20.0469C12.0361 19.4609 12.3965 18.916 12.8535 18.4121C13.3105 17.9023 14.0195 17.3076 14.9805 16.6279C15.8594 15.9717 16.4746 15.3916 16.8262 14.8877C17.1777 14.3779 17.3535 13.8389 17.3535 13.2705C17.3535 12.0459 16.6855 11.4336 15.3496 11.4336C14.1777 11.4336 13.0586 11.9023 11.9922 12.8398V10.3086C13.1816 9.54102 14.5176 9.15723 16 9.15723C17.3594 9.15723 18.4346 9.50586 19.2256 10.2031C20.0166 10.8945 20.4121 11.8496 20.4121 13.0684C20.4121 13.748 20.2979 14.3633 20.0693 14.9141C19.8408 15.459 19.5098 15.9717 19.0762 16.4521C18.6426 16.9326 17.9482 17.5098 16.9932 18.1836C16.0732 18.8398 15.4551 19.3467 15.1387 19.7041C14.8223 20.0615 14.6641 20.3721 14.6641 20.6357Z" fill="white"/>
 </svg>
 
-<span class="text-bold text-dark text-body1">결제 방법을 선택</span>
+<span class="text-bold text-dark text-body1">Choose a payment method</span>
                   </div>
 
 
@@ -373,22 +373,22 @@
                     </div>
 
 
-                  <div class="btn2 ">계획을 선택</div>
+                  <div class="btn2 ">Choose a plan</div>
                 </div>
               </div>
 
             </div>
             <div class="tariff-info">
-              <p class="text-dark text-h6 text-bold">지불 규칙</p>
-              <p>구독 결제 단계:</p>
-                <p>1. 웹사이트에서 회원가입</p>
-                <p>2. 사이트 입력</p>
-                <p>3. 구독 선택 및 결제</p>
-                <p>4. 당사 플랫폼 사용</p>
-              <p class="text-body2">사용자가 만료된 후 구독 갱신 기간을 결정합니다! 모든 구독은 수동으로 갱신되며 자동 구독은 없습니다.
-구독이 만료되면 모든 데이터가 저장되며 갱신 후 플랫폼을 다시 사용할 수 있습니다.</p>
+              <p class="text-dark text-h6 text-bold">Payment rules</p>
+              <p>Subscription payment steps:</p>
+              <p>1. Register on the website</p>
+              <p>2. Enter site</p>
+              <p>3. Select Subscription and Pay</p>
+              <p>4. Use of our platform</p>
+              <p class="text-body2">Determines how long the subscription renews after the user expires! All subscriptions are manually renewed and there are no automatic subscriptions.
+                When your subscription expires, all data will be saved and you will be able to use the platform again after renewal.</p>
 
-              <p class="text-dark text-h6 text-bold">우리는 지불을 지원합니다</p>
+              <p class="text-dark text-h6 text-bold">We support payments</p>
               <div class="flex justify-between q-mb-md">
                 <img src="~assets/p1.png" alt="">
                 <img src="~assets/p2.png" alt="">
@@ -426,7 +426,7 @@
     <q-dialog v-model="payModalActive" persistent transition-show="scale" transition-hide="scale">
     <q-card class="cursor-pointer" style="border-radius: 24px;width: 800px; max-width: 80vw;">
       <q-card-section class="row items-center q-pb-none text-dark">
-        <div class="text-h6">女孩目录</div>
+        <div class="text-h6">Girls catalog</div>
 
       </q-card-section>
       <q-separator spaced="md"/>
