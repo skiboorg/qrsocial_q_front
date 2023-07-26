@@ -1,7 +1,7 @@
 <template>
 
 			<div v-if="false" class="fans backblock">
-				<div class="h1">简要信息 113</div>
+				<div class="h1">Brief information 113</div>
 				<div class="list">
 					<div class="people">
 						<div class="one">

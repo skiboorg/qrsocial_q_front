@@ -13,9 +13,9 @@
         dense
         no-caps
       >
-        <q-tab :ripple="false" name="1"  label="일일" />
-        <q-tab :ripple="false" name="2"  label="주간" />
-        <q-tab :ripple="false" name="3"  label="달마다" />
+        <q-tab :ripple="false" name="1"  label="Day" />
+        <q-tab :ripple="false" name="2"  label="Week" />
+        <q-tab :ripple="false" name="3"  label="Month" />
       </q-tabs>
   </div>
 

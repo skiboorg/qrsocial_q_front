@@ -1,11 +1,11 @@
 <template>
   <div class="documents">
     <div class="navbar">
-      <div class="nav cursor-pointer" @click="$router.push('/rules')">平台规则</div>
-      <div class="nav cursor-pointer" @click="$router.push('/history')">업데이트 기록</div>
-      <div class="nav cursor-pointer" @click="$router.push('/instrustions')">가이드</div>
-      <div class="nav active" >VIP 혜택</div>
-      <div class="nav cursor-pointer" @click="$router.push('/contacts')">연락하다</div>
+      <div class="nav cursor-pointer" @click="$router.push('/rules')">Platform rules</div>
+      <div class="nav cursor-pointer" @click="$router.push('/history')">Update history</div>
+      <div class="nav cursor-pointer" @click="$router.push('/instrustions')">guide</div>
+      <div class="nav active" >VIP benefits</div>
+      <div class="nav cursor-pointer" @click="$router.push('/contacts')">Contact</div>
 
     </div>
     <div class="contents">

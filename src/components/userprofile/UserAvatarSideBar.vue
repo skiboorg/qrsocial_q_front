@@ -8,9 +8,9 @@
         </div>
 
 
-				<div class="edit cursor-pointer " @click="$router.push({name:'user-profile-settings'})">내 설정</div>
-				<div class="edit cursor-pointer text-primary" @click="logout">로그 아웃</div>
-				<div v-if="!$auth.user.is_vip" class="key cursor-pointer" @click="$router.push({name:'faq-guidevip'})"><img src="~assets/key.svg" alt="key">리더보드 VIP</div>
+				<div class="edit cursor-pointer " @click="$router.push({name:'user-profile-settings'})">My settings</div>
+				<div class="edit cursor-pointer text-primary" @click="logout">Log out</div>
+				<div v-if="!$auth.user.is_vip" class="key cursor-pointer" @click="$router.push({name:'faq-guidevip'})"><img src="~assets/key.svg" alt="key">Buy VIP</div>
 			</div>
 			<div v-if="$auth.user.own_friend_list[0].friend_list.length > 0" class="favorite-block backblock">
 				<div class="favorite">즐겨찾기</div>

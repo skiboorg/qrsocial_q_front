@@ -2,7 +2,7 @@
 <div class="catalog catalogstream backblock">
   <div class="top">
     <img class="fire" src="~assets/tv.svg" alt="tv">
-    <div class="text">스트리밍 및 방송</div>
+    <div class="text">Streams</div>
   </div>
 			<div class="grid">
 

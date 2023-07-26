@@ -1,6 +1,6 @@
 <template>
     <div class="stats  backblock">
-			<div class="h1">我的VIP状态</div>
+			<div class="h1">My VIP status</div>
 
 <div class="q-pa-md text-center">
   <router-link to="/guidevip">

@@ -1,35 +1,35 @@
 <template>
   <div class="payment-block text-dark">
-    <p v-if="blockType==='index'" class="text-h6">在我们的网站上支付您的会员费以开始使用我们的平台！<br> 选择关税和付款方式。</p>
-    <p>지불 방법</p>
+    <p v-if="blockType==='index'" class="text-h6">Pay your membership fee on our website to start using our platform! <br> Choose tariff and payment method.。</p>
+    <p>Payment method</p>
       <div class="payment-grid q-mb-md">
         <q-card @click="selectedPaymentType=index" class="payment-card" :class="{active:selectedPaymentType===index}" v-for="(type,index) in paymentTypes" :key="index">
           <img draggable="false" style="width: 120px;height: 80px;object-fit: contain" :src="type.img" alt="">
 <!--          <p class="no-margin">{{type.name}}</p>-->
         </q-card>
       </div>
-     <p v-if="blockType==='index'" >账户类型 <router-link class="q-ml-md inline-block text-primary" to="/instrustions">了解VIP权益</router-link></p>
+     <p v-if="blockType==='index'" >Account type <router-link class="q-ml-md inline-block text-primary" to="/instrustions">Learn about VIP benefits</router-link></p>
       <div v-if="blockType==='index'" class="payment-grid q-mb-md">
         <q-card @click="selectedPaymentAccountType=index" class="payment-card" :class="{active:selectedPaymentAccountType===index}" v-for="(type,index) in paymentAccountTypes" :key="index">
           <p class="no-margin">{{type.name}}</p>
         </q-card>
       </div>
-    <p v-if="blockType==='lk'">보충 방법</p>
+    <p v-if="blockType==='lk'">Replenishment method</p>
       <div v-if="blockType==='lk'" class="payment-grid q-mb-md">
         <q-card @click="selectedPaymentAmount=index" class="payment-card" :class="{active:selectedPaymentAmount===index}" v-for="(type,index) in paymentAmounts" :key="index">
           <p class="no-margin flex items-center"><img src="~assets/diamond.svg" alt="">{{type.coins}}</p>
-          <p class="no-margin flex items-end text-grey-7 text-bold"><span class="text-caption inline-block q-mr-xs">₩</span> {{type.price}}</p>
+          <p class="no-margin flex items-end text-grey-7 text-bold"><span class="text-caption inline-block q-mr-xs">$</span> {{type.price}}</p>
         </q-card>
       </div>
-    <p v-if="blockType==='index'">账户到期日</p>
+    <p v-if="blockType==='index'">Account expiration date</p>
       <div v-if="blockType==='index'" class="payment-grid q-mb-md">
         <q-card @click="selectedMonth=index" class="payment-card" :class="{active:selectedMonth===index}" v-for="(type,index) in paymentMonths" :key="index">
           <p class="no-margin flex items-center">{{type.months}}</p>
-          <p class="no-margin flex items-end text-grey-7 text-bold"><span class="text-caption inline-block q-mr-xs">₩ </span> {{type.price}}</p>
+          <p class="no-margin flex items-end text-grey-7 text-bold"><span class="text-caption inline-block q-mr-xs">$</span> {{type.price}}</p>
         </q-card>
       </div>
   <div class="text-center">
-    <q-btn label="재충전" rounded unelevated @click="add"  class="q-px-xl q-py-sm text-bold" color="primary"/>
+    <q-btn label="Recharge" rounded unelevated @click="add"  class="q-px-xl q-py-sm text-bold" color="primary"/>
   </div>
   </div>
 
@@ -56,20 +56,20 @@ export default {
 
       ],
       paymentAccountTypes:[
-        {name:'会员资格'},
-        {name:'贵宾会员VIP'}
+        {name:'Membership'},
+        {name:'VIP member'}
       ],
       paymentAmounts:[
-        {coins:'150',price:19800},
-        {coins:'300',price:34600},
-        {coins:'750',price:88800},
-        {coins:'1500',price:140400},
+        {coins:'150',price:3},
+        {coins:'300',price:5},
+        {coins:'750',price:8},
+        {coins:'1500',price:12},
       ],
       paymentMonths:[
-        {months:'1个月',price:1},
-        {months:'3个月',price:100},
-        {months:'6个月',price:300},
-        {months:'12个月',price:600},
+        {months:'1 month',price:1},
+    {months:'3 months',price:100},
+    {months:'6 months',price:300},
+    {months:'12 months',price:600},
       ]
 
 

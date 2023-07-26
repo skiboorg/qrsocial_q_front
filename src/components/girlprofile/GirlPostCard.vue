@@ -43,8 +43,8 @@
         </div>
       </div>
       <div class="blurpost">
-        <div class="title">VIP帖子，<br>仅限VIP用户</div>
-        <div class="btn">升级为VIP</div>
+        <div class="title">VIP posts,<br>VIP users only</div>
+        <div class="btn">Upgrade to VIP</div>
       </div>
     </div>
   </div>

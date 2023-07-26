@@ -1,6 +1,6 @@
 <template>
   <div style="margin-top: 0" class="content backblock">
-			<div class="h1">균형</div>
+			<div class="h1">Balance</div>
 			<div style="border-bottom: none" class="info">
 			<PaymentBlock block-type="lk"/>
 		</div>

@@ -170,7 +170,7 @@
             <div class="right favorite-block">
               <div class="flex items-center q-pa-lg">
                 <img class="q-mr-md " src="~assets/rating.svg" alt="fire">
-              <div class="title text-bold">논평</div>
+              <div class="title text-bold">Rating</div>
               </div>
               <Ratings block-type="index"/>
               <div class="text-center q-pa-md">
@@ -303,8 +303,8 @@
                     <div class="switch">
                       <!--                      -->
                       <div class="switch-inner " :class="{'active-right':!tariffSwitchStandart}"></div>
-                      <div class="switch-left " @click="tariffSwitchStandart=true, tariff_index=0" :class="{itemActive:tariffSwitchStandart}"><p class="no-margin text-bold cursor-pointer" >단순 관세</p></div>
-                      <div class="switch-right" @click="tariffSwitchStandart=false,tariff_index=0" :class="{itemActive:!tariffSwitchStandart}"><p  class="no-margin text-bold cursor-pointer" >VIP 구독</p></div>
+                      <div class="switch-left " @click="tariffSwitchStandart=true, tariff_index=0" :class="{itemActive:tariffSwitchStandart}"><p class="no-margin text-bold cursor-pointer" >Simple</p></div>
+                      <div class="switch-right" @click="tariffSwitchStandart=false,tariff_index=0" :class="{itemActive:!tariffSwitchStandart}"><p  class="no-margin text-bold cursor-pointer" >VIP</p></div>
                     </div>
                      <div class="params " :class="{active:item.active}" v-for="item in tariffSwitchStandart ? standartTariff.params : vipTariff.params">
 
@@ -524,22 +524,22 @@ export default {
       tariff_index:0,
       tariff:{label:'3', price: '67,700.00'},
       standartOptions:[
-        {label:'3 개월',price:'67,700.00',text:'표준 요금'},
-        {label:'6 개월',price:'118,800.00',text:'10% 절약'},
-        {label:'12 개월',price:'207,800.00',text:'25% 절약'},
+        {label:'3 months',price:'30$',text:'standard rate'},
+        {label:'6 months',price:'54$',text:'10% discount'},
+        {label:'12 months',price:'90$',text:'25% discount'},
       ],
       vipOptions:[
-        {label:'3 개월',price:'315,500.00',text:'표준 요금'},
-        {label:'6 개월',price:'815,800.00',text:'10% 절약'},
-        {label:'12 개월',price:'1,355,500.00',text:'25% 절약'},
+        {label:'3 months',price:'105$',text:'standard rate'},
+        {label:'6 months',price:'189$',text:'10% discount'},
+        {label:'12 months',price:'315$',text:'25% discount'},
       ],
       standartTariff:{
         params:[
-          {name:'24번 소통 7',active:true},
-          {name:'생방송 참여 및 선물 증정',active:true},
-          {name:'소녀 프로필: 사진, 비디오, 오디오 녹음',active:true},
-          {name:'VIP 클럽: 스페셜 앨범, 스트리밍, 비디오',active:false},
-          {name:'관심 및 응답 보장 증가',active:false},
+          {name:'Communication 24 7',active:true},
+          {name:'Participate in live broadcast and present gifts',active:true},
+          {name:'Girl profile: photo, video, audio recording',active:true},
+          {name:'VIP Club: Special Album, Stream, Video',active:false},
+          {name:'Increase attention and response guarantees',active:false},
         ],
         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat tristique vestibulum mi.\n' +
           '\n' +
@@ -547,11 +547,11 @@ export default {
       },
       vipTariff:{
         params:[
-          {name:'24번 소통 7',active:true},
-          {name:'생방송 참여 및 선물 증정',active:true},
-          {name:'소녀 프로필: 사진, 비디오, 오디오 녹음',active:true},
-          {name:'VIP 클럽: 스페셜 앨범, 스트리밍, 비디오',active:true},
-          {name:'관심 및 응답 보장 증가',active:true},
+          {name:'Communication 24 7',active:true},
+          {name:'Participate in live broadcast and present gifts',active:true},
+          {name:'Girl profile: photo, video, audio recording',active:true},
+          {name:'VIP Club: Special Album, Stream, Video',active:true},
+          {name:'Increase attention and response guarantees',active:true},
         ],
         text:'1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat tristique vestibulum mi.\n' +
           '\n' +

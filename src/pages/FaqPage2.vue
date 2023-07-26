@@ -29,7 +29,7 @@
 我们会在24小时内回复您！</div>
 			</div>
 			<div class="right backblock">
-				<div class="h1">简要信息</div>
+				<div class="h1">Brief information</div>
 				<div class="input mail">E-mail</div>
 				<div class="input info">
 					<div class="title">要信息  要信息</div>

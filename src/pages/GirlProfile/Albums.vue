@@ -1,6 +1,6 @@
 <template>
   <div class="album backblock">
-				<div v-if="!galleryShow" class="h1">简要信息 113</div>
+				<div v-if="!galleryShow" class="h1">Brief information 113</div>
 
 				<div v-if="!galleryShow" class="photoblock">
 
@@ -12,8 +12,8 @@
 						<div class="photo">
 							<img class="image" :src="gallery.image" alt="photo">
 							<div class="blur">
-								<div class="text">通兴VIP</div>
-								<div class="btn cursor-pointer">补充</div>
+								<div class="text">Buy VIP</div>
+								<div class="btn cursor-pointer">Replenish</div>
 								<div class="num">{{gallery.images.length}}</div>
 							</div>
 						</div>

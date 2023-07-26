@@ -9,8 +9,8 @@
 <!--							<div class="num">142</div>-->
 <!--						</div>-->
 <!--						<div class="blur">-->
-<!--							<div class="text1">通兴VIP</div>-->
-<!--							<div class="btn">补充</div>-->
+<!--							<div class="text1">Buy VIP</div>-->
+<!--							<div class="btn">Replenish</div>-->
 <!--						</div>-->
 					</div>
 

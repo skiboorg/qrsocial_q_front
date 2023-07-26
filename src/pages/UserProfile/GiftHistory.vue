@@ -1,6 +1,6 @@
 <template>
   <div class="subscribe backblock">
-    <div class="h1">선물 내역</div>
+    <div class="h1">Gift history</div>
     <div class="subblock">
       <!--        :class="{'bg-green-1':  gift.answer_text}"-->
       <div class="cursor-pointer"  @click="cur_gift=index,giftModalActive=true" v-for="(gift,index) in sended_gift" :key="gift.id">
@@ -54,7 +54,7 @@
   <q-dialog v-model="giftModalActive">
     <q-card class="cursor-pointer text-dark" style="border-radius: 24px;width: 660px; max-width: 90vw;">
       <q-card-section class="row items-center q-pb-none text-dark">
-        <div class="text-h6">礼品详情</div>
+        <div class="text-h6">Gift details</div>
         <q-space />
         <q-btn icon="close" flat round dense v-close-popup />
       </q-card-section>

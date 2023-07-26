@@ -6,8 +6,8 @@
 						<img class="image" :src="stream.image" alt="photo">
 						<div class="date text-white">{{ new Date (stream.date).toLocaleDateString()}}</div>
 						<div class="blur">
-							<div class="text1">通兴VIP</div>
-							<div class="btn">补充</div>
+							<div class="text1">Buy VIP</div>
+							<div class="btn">Replenish</div>
 						</div>
 					</div>
 					<div class="info">

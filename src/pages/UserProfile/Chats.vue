@@ -18,7 +18,7 @@
             </div>
           </div>
           <div class="chats-r">
-            <q-badge v-if="chat.opponent.is_online"  color="green-13">在线</q-badge>
+            <q-badge v-if="chat.opponent.is_online"  color="green-13">Online</q-badge>
 
           </div>
         </div>
@@ -29,7 +29,7 @@
             </q-avatar>
             <div class="chats-info">
               <div class="name">{{chat.starter.fio}}</div>
-              <div class="preview">你： 好吧，第三个？ 关于关于....</div>
+<!--              <div class="preview">你： 好吧，第三个？ 关于关于....</div>-->
             </div>
           </div>
           <div class="chats-r">

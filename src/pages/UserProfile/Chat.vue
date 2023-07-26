@@ -6,7 +6,7 @@
     <div class="top">
       <img class="arrow cursor-pointer" @click="$router.back()" src="~assets/arrow.svg" alt="arrow">
       <div v-if="currentChat!==0" class="right">
-        <div v-if="chatData.is_online" class="time "> <q-badge  color="green-13">在线</q-badge></div>
+        <div v-if="chatData.is_online" class="time "> <q-badge  color="green-13">online</q-badge></div>
         <div class="account">
           <div class="title flex items-center">
             <q-avatar class="q-mr-sm">
@@ -49,7 +49,7 @@
     <div class="bottom">
       <div class="chat-send-block">
 
-        <q-input  :loading="is_loading" :disable="is_loading" filled @keydown="keyDown" v-model="message" label="写短信" class="col-grow q-mr-md"   />
+        <q-input  :loading="is_loading" :disable="is_loading" filled @keydown="keyDown" v-model="message" label="Write text message" class="col-grow q-mr-md"   />
         <q-btn text-color="primary" :disable="!message" :loading="is_loading" class="q-mr-md" @click="sendChatMessage(null)" round icon="send"/>
         <q-btn text-color="primary" :loading="is_loading" class="q-mr-md" round icon="card_giftcard">
 

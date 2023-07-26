@@ -2,7 +2,7 @@
  <div class="catalog catalogstream backblock">
 			 <div class="flex items-center q-pa-lg">
                 <img class="q-mr-md " src="~assets/rating.svg" alt="fire">
-              <div class="title text-dark">门户评级</div>
+              <div class="title text-dark">Rating</div>
               </div>
 			<Ratings block-type="page"/>
 		</div>

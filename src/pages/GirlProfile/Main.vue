@@ -4,14 +4,14 @@
 			<div class="block-one backblock">
 
 				<div class="center" :class="{'active':showMoreInfo || $q.screen.lt.md}">
-					<div class="text-body2 q-mb-md text-bold text-grey-6">信息</div>
+					<div class="text-body2 q-mb-md text-bold text-grey-6">Information</div>
 					<div class="info-block">
 						<div class="info-left">
 							<div class="params womanwall">
 
 
-								<div>出生日期</div>
-								<div>居住地</div>
+								<div>Date of birth</div>
+								<div>City</div>
 							</div>
 							<div class="data">
 
@@ -19,16 +19,16 @@
 								<div>{{currentGirl.city}}</div>
 							</div>
 						</div>
-						<div @click="showMoreInfo=!showMoreInfo" class="show cursor-pointer">显示全部</div>
+						<div @click="showMoreInfo=!showMoreInfo" class="show cursor-pointer">Display all</div>
 					</div>
 					<div class="more-info">
 						<div class="about">
-							<div class="h1">关于我</div>
+              <div class="h1">About me</div>
 							<div class="moreinfoblock">
 								<div class="left">
-									<div class="l">教育</div>
-									<div class="l">专业</div>
-									<div class="l">关于我</div>
+                  <div class="l">Education</div>
+                  <div class="l">Professional</div>
+                  <div class="l">About me</div>
 								</div>
 								<div class="right">
 									<div class="r">{{currentGirl.education}}</div>
@@ -38,12 +38,12 @@
 							</div>
 						</div>
 						<div class="hobbies">
-							<div class="h1">兴趣</div>
+              <div class="h1">Interest</div>
 							<div class="moreinfoblock">
 								<div class="left">
-									<div class="l">爱好</div>
-									<div class="l">我喜欢什么</div>
-									<div class="l">艺术</div>
+                  <div class="l">Hobbies</div>
+                  <div class="l">What do I like</div>
+                  <div class="l">Art</div>
 								</div>
 								<div class="right">
                     	<div class="r">
@@ -56,12 +56,12 @@
 								</div>
 							</div>
 						</div>
-						<div @click="showMoreInfo=!showMoreInfo" class="hide cursor-pointer gt-sm">隐藏信息</div>
+						<div @click="showMoreInfo=!showMoreInfo" class="hide cursor-pointer gt-sm">Hide</div>
 					</div>
 				</div>
 				<div class="bottom">
 					<div class="add-photo">
-						<div class="text-body2 q-mb-md text-bold text-grey-6">我的照片</div>
+						<div class="text-body2 q-mb-md text-bold text-grey-6">My Photo</div>
 
 					</div>
 					<div class="photo-grid">
